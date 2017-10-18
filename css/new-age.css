@@ -188,8 +188,8 @@ header.masthead {
     padding-bottom: 100px;
     color: white;
     background: url("../img/bg-pattern.png"), #397AA7;
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #296697, #0C427A);
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, #296697, #0C427A); }
+    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to top, #296697, #0C427A);
+    background: url("../img/bg-pattern.png"), linear-gradient(to top, #296697, #0C427A); }
 header.masthead .header-content {
     max-width: 500px;
     margin-bottom: 100px;
@@ -221,10 +221,10 @@ header.mastheadWB {
     width: 100%;
     padding-top: 150px;
     padding-bottom: 100px;
-    color: white;
-    background: url("../img/bg-pattern.png"), #397AA7;
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #FFFFFF, #F4973A);
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, #FFFFFF, #F4973A); }
+    color: black;
+    background: url("../img/bg-pattern.png"), #ffffff;
+    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to bottom, #ffffff, #F4973A);
+    background: url("../img/bg-pattern.png"), linear-gradient(to bottom, #ffffff, #F4973A); }
 header.mastheadWB .header-content {
     max-width: 500px;
     margin-bottom: 100px;
@@ -381,9 +381,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     text-decoration: none; }
 
 .bg-primary {
-    background: #2C6A9A;
-    background: -webkit-linear-gradient(#2C6A9A, #fdc539);
-    background: linear-gradient(#2C6A9A, #fdc539); }
+    background: #296697;
+    background: -webkit-linear-gradient(#296697, #ffffff);
+    background: linear-gradient(#296697, #ffffff); }
 
 .bg-primaryWB {
     background: #2C6A9A;
