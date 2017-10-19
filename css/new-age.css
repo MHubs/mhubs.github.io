@@ -397,14 +397,23 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     padding-right: 0;
     padding-left: 0; }
 
+.btn-outlineWB {
+    color: white;
+    border: 1px solid;
+    border-color: white; }
+.btn-outlineWB:hover, .btn-outlineWB:focus, .btn-outlineWB:active, .btn-outlineWB.active {
+    color: white;
+    border-color: #fdcc52;
+    background-color: #fdcc52; }
+
 .btn-outline {
     color: white;
     border: 1px solid;
     border-color: white; }
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: white;
-    border-color: #fdcc52;
-    background-color: #fdcc52; }
+    border-color: #0C427A;
+    background-color: #0C427A; }
 
 .btn {
     border-radius: 300px;
