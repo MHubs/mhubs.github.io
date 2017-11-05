@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html>
+<head>
+    <title>T&P</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+
+    <script src="p5.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+        #map {
+            height: 100%;
+        }
+        #clickMe {
+            position: absolute; bottom: 10px; z-index: 99; width: 50%; left: 50%; margin: -30% 0 0 -25%;
+        }
+
+        #stats {
+
+            position: absolute; bottom: 15px; right: 10px; z-index: 99;
+        }
+
+        #End {
+            position: absolute;
+            left: 33%;
+            width: 33%;
+            height: auto;
+            z-index: 9999;
+            bottom: 15%;
+
+            overflow: auto;
+
+            transition: background-color 1s, color 1s, text 1s;
+            -moz-transition: background-color 1s, color 1s, text 1s;
+            -webkit-transition: background-color 1s, color 1s, text 1s;
+            -o-transition: background-color 1s, color 1s, text 1s;
+
+            background-color: rgba(250, 250, 250, 1);
+
+            color: rgba(0, 0, 0, 1);
+
+            display: none;
+        }
+
+        #Start {
+            position: absolute; top: 10px; left: 10px; width: 33%; height: auto; z-index: 99;
+            overflow: auto;
+
+            transition: background-color 1s, color 1s, text 1s;
+            -moz-transition: background-color 1s, color 1s, text 1s;
+            -webkit-transition: background-color 1s, color 1s, text 1s;
+            -o-transition: background-color 1s, color 1s, text 1s;
+
+            background-color: rgba(250, 250, 250, 0.5);
+
+            color: rgba(0, 0, 0, 0.5);
+        }
+        #Start:hover {
+            background-color: rgba(250, 250, 250, 1);
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #Info {
+            position: absolute; top: 10px; left: 10px; width: 33%; height: 70%; z-index: 99;
+            overflow: auto;
+
+            transition: background-color 1s, color 1s, text 1s;
+            -moz-transition: background-color 1s, color 1s, text 1s;
+            -webkit-transition: background-color 1s, color 1s, text 1s;
+            -o-transition: background-color 1s, color 1s, text 1s;
+
+            background-color: rgba(250, 250, 250, 0.5);
+
+            color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        #Info:hover {
+            background-color: rgba(250, 250, 250, 1);
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #Shooter {
+            position: absolute; top: 10px; right: 10px; width: 25%; height: 60%; z-index: 99;
+            overflow: auto;
+            display: none;
+
+            transition: background-color 1s, color 1s;
+            -moz-transition: background-color 1s, color 1s;
+            -webkit-transition: background-color 1s, color 1s;
+            -o-transition: background-color 1s, color 1s;
+
+            background-color: rgba(250, 250, 250, 0.5);
+
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        #Shooter:hover {
+            background-color: rgba(250, 250, 250, 1);
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #notEnough {
+            position: absolute;
+            width: 300px;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -150px;
+            z-index: 999;
+            display: none;
+        }
+
+        #Stat {
+            position: absolute;
+            width: 50%;
+            height: auto;
+            left: 50%;
+            bottom: 8%;
+            margin: -30% 0 0 -25%;
+            z-index: 999;
+            display:none;
+            background-color: rgba(250, 250, 250, 1);
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+    <!--panTo(37.775,-122.419);-->
+    <div class="alert alert-danger" role="alert" id="notEnough">
+        <h4 class="alert-heading">Not enough!</h4>
+        <p>There was another attack. Maybe if you pray more it won't happen again!</p>
+    </div>
+    <button type="button" id="clickMe" class="btn btn-primary btn-lg btn-block"><span id="clickMeSpan">Begin</span></button>
+
+    <button type="button" id="stats" class="btn btn-light" onclick="toggleStats();"><img src="Glyphs/glyphicons-41-stats.png"></button>
+
+    <div class="jumbotron" id="Start" data-spy="scroll">
+
+        <div style="width: 100%; height: auto;"><h1 style="display: inline-block; background-color: inherit">US Mass Shootings</h1></div>
+        <p class="lead" ><h2>1982-2017</h2></p>
+        <p class="lead">Click begin to walk through major mass shootings in the US since 1982 and learn about each one.</p>
+    </div>
+
+    <div class="jumbotron" id="End" data-spy="scroll">
+
+        <div style="width: 100%; height: auto;" align="center"><h1 style="display: inline-block; background-color: inherit" align="center">This must stop</h1></div>
+        <p class="lead" align="center"><h2 align="center">We've gone on for too long without change. The time is now.</h2></p>
+        <p class="lead">Now is not the time to pray for a solution, nor is it the time to spread hate. We must enforce stricter gun laws to prevent more attacks.
+            Over 50% of shooters were white legal American citizens. Banning immigration will solve little as the terror comes from within.
+            We must not let ourselves be silenced in the face of bigotry. Only we can stop future attacks, but only if we all work together.</p>
+    </div>
+
+
+    <div class="jumbotron" id="Info" data-spy="scroll">
+
+        <div style="width: 100%; height: auto;" id="Shoot"><h1 id="ShootingName" style="display: inline-block; background-color: inherit">US Mass Shootings</h1></div>
+        <p class="lead"><h2 id="Date">1982-2017</h2></p>
+        <p class="lead" id="Summary">Click begin to walk through major mass shootings in the US since 1982 and learn about each one.</p>
+        <hr class="my-4">
+        <div class="container" id="Con" style="visibility: hidden">
+            <div class="row">
+                <div class="col-sm">
+                    <p align="center"><b id="K" style="opacity: 0">Killed: </b><p align="center" id="Killed" style="opacity: 0">0</p></p>
+                </div>
+                <div class="col-sm">
+                    <p align="center"><b id="I" style="opacity: 0">Injured: </b><p align="center" id="Injured" style="opacity: 0">0</p></p>
+                </div>
+            </div>
+        </div>
+
+        <p align="right" class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button" style="opacity: 0" target="_blank" id="LearnMore">Learn more</a>
+        </p>
+    </div>
+
+    <div class="jumbotron" id="Shooter" data-spy="scroll">
+        <h1 id="ShooterName" style="display: inline-block; opacity: 0">Shooter</h1>
+        <p class="lead"><h2 id="Age" style="opacity: 0">Age</h2></p>
+        <hr class="my-4">
+        <div class="container" id="Cont" style="visibility: collapse">
+            <div class="col">
+                <div class="row-sm">
+                    <p><b id="S" style="opacity: 0">Sex: </b><p id="Sex" style="opacity: 0">0</p></p>
+                </div>
+                <div class="row-sm">
+                    <p><b id="R" style="opacity: 0">Race: </b><p id="Race" style="opacity: 0">0</p></p>
+                </div>
+                <div class="row-sm">
+                    <p><b id="W" style="opacity: 0">Weapon: </b><p  id="Weapon" style="opacity: 0">0</p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="jumbotron" id="Stat" data-spy="scroll">
+
+
+        <h1 style="display: inline-block;">Statistics</h1>
+        <p class="lead"><h2 id="Total Shootings">Age</h2></p>
+        <hr class="my-4">
+        <p align="center"><b>Shooter's Race</b></p>
+        <canvas id="myChart" width=100% height=25%></canvas>
+        <div class="row">
+            <div class="col-sm">
+                <p align="center"><b>Average Age: </b> <p align="center" id="Avg Age"></p> </p>
+            </div>
+            <div class="col-sm">
+                <p align="center"><b>Lowest Age: </b><p align="center" id="Low Age"></p> </p>
+            </div>
+            <div class="col-sm">
+                <p align="center"><b>Highest Age: </b> <p align="center" id="High Age"></p> </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <p align="center"><b>Total Killed: </b> <p align="center" id="Deaths"></p></p>
+            </div>
+            <div class="col-sm">
+                <p align="center"><b>Total Injured: </b><p align="center" id="Injuries"></p></p>
+            </div>
+        </div>
+        <p>*Not all US shootings since 1982 are shown on this website. These are a collection of shootings that received the most press.</p>
+    </div>
+
+
+    <script>
+
+        var open = false;
+
+        function toggleStats() {
+
+            if (!open) {
+                Alert.statIn();
+                Alert.startOut();
+                Alert.infoOut();
+                Alert.shootOut();
+                Alert.endOut();
+
+                open = true;
+            } else {
+                Alert.statOut();
+
+                if (count !== 0 && count < i) {
+                    Alert.infoIn();
+                    Alert.shootIn();
+                } else {
+                    if (count !== 0) {
+                        Alert.endIn();
+                    } else {
+                        Alert.startIn();
+                    }
+
+                }
+
+
+
+                open = false;
+            }
+
+
+        }
+
+
+
+    </script>
+
+    <script>
+
+        $(function() {
+            Alert = {
+                show: function($div) {
+                    if ($div.css('display') === 'none') {
+                        // fadein, fadeout.
+                        $div.fadeIn(1000).delay(1500).fadeOut(1000);
+                    }
+                },
+                info: function() {
+                    this.show($('#notEnough'));
+                },
+                statIn: function() {
+                    this.i($('#Stat'));
+                },
+                statOut: function() {
+                    this.out($('#Stat'));
+                },
+                infoIn: function() {
+                    this.i($('#Info'));
+                },
+                infoOut: function() {
+                    this.out($('#Info'));
+                },
+                shootIn: function() {
+                    this.i($('#Shooter'));
+                },
+                shootOut: function() {
+                    this.out($('#Shooter'));
+                },
+                endIn: function() {
+                    this.i($('#End'));
+                },
+                endOut: function() {
+                    this.out($('#End'));
+                },
+                startIn: function() {
+                    this.i($('#Start'));
+                },
+                startOut: function() {
+                    this.out($('#Start'));
+                },
+                i: function($div) {
+                    if ($div.css('display') === 'none') {
+                        // fadein, fadeout.
+                        $div.fadeIn(1000);
+                    }
+                },
+                out: function($div) {
+                    if ($div.css('display') === 'block') {
+                        // fadein, fadeout.
+                        $div.fadeOut(1000);
+                    }
+
+                }
+            };
+            $('#clickMe').click(function() {
+
+                if (count !== 0 && count < i) {
+
+                    Alert.info();
+                }
+
+                display();
+
+            });
+
+        });
+
+        var shootings;
+
+        function loadJSON(file, callback) {
+
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                    callback(xobj.responseText);
+
+                }
+            };
+            xobj.send(null);
+        }
+
+        var count = -1;
+        var actual_JSON;
+
+
+        function display() {
+
+            count = count + 1;
+
+            if (open) {
+                toggleStats();
+            }
+
+            if (document.getElementById("clickMeSpan").innerHTML === "Replay") {
+
+                window.location.reload(false);
+
+            } else {
+
+
+                if (count === i) {
+
+                    Alert.out($('#Shooter'));
+                    Alert.out($('#Info'));
+                    Alert.i($('#End'));
+
+                    $('#clickMeSpan').animate({opacity: 0}, 400, function () {
+                        $('#clickMeSpan').text("Replay").animate({opacity: 1}, 1000);
+                    });
+
+                } else {
+
+                    Alert.out($('#Start'));
+                    Alert.i($('#Shooter'));
+                    Alert.i($('#Info'));
+
+                    document.getElementById("Con").style.visibility = "Visible";
+                    document.getElementById("Cont").style.visibility = "Visible";
+
+                    $('#clickMeSpan').animate({opacity: 0}, 400, function () {
+                        $('#clickMeSpan').text("Send Thoughts and Prayers").animate({opacity: 1}, 1000);
+                    });
+
+                    $('#ShootingName').animate({opacity: 0}, 400, function () {
+                        $('#ShootingName').text(actual_JSON["USMassShootings"][0][shootings[count]]["Case"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Summary').animate({opacity: 0}, 400, function () {
+                        $('#Summary').text(actual_JSON["USMassShootings"][0][shootings[count]]["Summary"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Killed').animate({opacity: 0}, 400, function () {
+                        $('#Killed').text(actual_JSON["USMassShootings"][0][shootings[count]]["Fatalities"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Injured').animate({opacity: 0}, 400, function () {
+                        $('#Injured').text(actual_JSON["USMassShootings"][0][shootings[count]]["Injured"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Date').animate({opacity: 0}, 400, function () {
+                        $('#Date').text(actual_JSON["USMassShootings"][0][shootings[count]]["Date"].split("T")[0]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#K').animate({opacity: 0}, 400, function () {
+                        $('#K').animate({opacity: 1}, 1000);
+                    });
+
+                    $('#I').animate({opacity: 0}, 400, function () {
+                        $('#I').animate({opacity: 1}, 1000);
+                    });
+
+                    var n = actual_JSON["USMassShootings"][0][shootings[count]]["Shooter"].split("; ");
+
+                    var age = "";
+                    var name = "";
+
+                    var c = 0;
+
+                    for (a in n) {
+
+                        if (c != 0) {
+                            name = name + " and ";
+                            age = age + " and ";
+                        }
+
+
+                        name = name + n[a].split(", ")[0];
+                        age = age + n[a].split(", ")[1] + " Years old";
+
+                        c = c + 1
+                    }
+
+
+                    $('#ShooterName').animate({opacity: 0}, 400, function () {
+                        $('#ShooterName').text(name).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Age').animate({opacity: 0}, 400, function () {
+                        $('#Age').text(age).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Sex').animate({opacity: 0}, 400, function () {
+                        $('#Sex').text(actual_JSON["USMassShootings"][0][shootings[count]]["Gender"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Race').animate({opacity: 0}, 400, function () {
+                        $('#Race').text(actual_JSON["USMassShootings"][0][shootings[count]]["Race"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#Weapon').animate({opacity: 0}, 400, function () {
+                        $('#Weapon').text(actual_JSON["USMassShootings"][0][shootings[count]]["Weapon details"]).animate({opacity: 1}, 1000);
+                    });
+
+                    $('#R').animate({opacity: 0}, 400, function () {
+                        $('#R').animate({opacity: 1}, 1000);
+                    });
+
+                    $('#S').animate({opacity: 0}, 400, function () {
+                        $('#S').animate({opacity: 1}, 1000);
+                    });
+
+                    $('#W').animate({opacity: 0}, 400, function () {
+                        $('#W').animate({opacity: 1}, 1000);
+                    });
+
+                    $('#LearnMore').animate({opacity: 0}, 400, function () {
+                        $('#LearnMore').animate({opacity: 1}, 1000);
+                    });
+
+                    var source = actual_JSON["USMassShootings"][0][shootings[count]]["Sources"];
+
+                    if (source == null || source == "") {
+                        document.getElementById("LearnMore").style.visibility = "Hidden";
+                    } else {
+                        document.getElementById("LearnMore").style.visibility = "Visible";
+                        document.getElementById("LearnMore").href = source.split(";")[0];
+                    }
+
+                    var lat = actual_JSON["USMassShootings"][0][shootings[count]]["latitude"];
+                    var long = actual_JSON["USMassShootings"][0][shootings[count]]["longitude"];
+
+                    panTo(lat, long);
+
+                }
+            }
+        }
+
+        var i = 0;
+
+        function load() {
+
+            var low = 1000;
+            var high = 0;
+            var avg = 0;
+
+            var dead = 0;
+            var injured = 0;
+
+            loadJSON("Mass Shootings.json", function(response) {
+
+               actual_JSON = JSON.parse(response);
+
+               shootings = [];
+
+                for (x in actual_JSON["USMassShootings"][0]) {
+                    shootings[i] = x;
+
+
+                    var n = actual_JSON["USMassShootings"][0][x]["Shooter"].split("; ");
+
+                    for (a in n) {
+
+                        low = Math.min(low, n[a].split(", ")[1]);
+                        high = Math.max(high, n[a].split(", ")[1]);
+                        avg = parseInt(avg) + parseInt(n[a].split(", ")[1]);
+
+                    }
+
+                    dead = dead + parseInt(actual_JSON["USMassShootings"][0][x]["Fatalities"]);
+                    injured = injured + parseInt(actual_JSON["USMassShootings"][0][x]["Injured"]);
+
+                    i = i + 1;
+                }
+
+
+                avg = Math.round(avg / i);
+
+                document.getElementById("High Age").innerHTML = high + "";
+                document.getElementById("Low Age").innerHTML = low + "";
+                document.getElementById("Avg Age").innerHTML = avg + "";
+                document.getElementById("Total Shootings").innerHTML = i + " Total Shootings*";
+                document.getElementById("Deaths").innerHTML = dead + "+";
+                document.getElementById("Injuries").innerHTML = injured + "+";
+            });
+
+
+
+
+        }
+
+        load();
+
+
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [53, 15, 7, 7, 6, 3, 1],
+
+                    label: "Shooter Race",
+
+                    backgroundColor: ['rgba(255, 0, 0, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(0, 0, 255, 0.2)',
+                        'rgba(0, 255, 0, 0.2)',
+                        'rgba(0, 255, 255, 0.2)',
+                        'rgba(255, 0, 255, 0.2)',
+                        'rgba(255, 255, 0, 0.2)'],
+
+                    borderColor: ['rgba(255, 0, 0, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(0, 0, 255, 0.2)',
+                        'rgba(0, 255, 0, 0.2)',
+                        'rgba(0, 255, 255, 0.2)',
+                        'rgba(255, 0, 255, 0.2)',
+                        'rgba(255, 255, 0, 0.2)'],
+
+                    hoverBackgroundColor: ['rgba(255, 0, 0, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(0, 0, 255, 0.2)',
+                        'rgba(0, 255, 0, 0.2)',
+                        'rgba(0, 255, 255, 0.2)',
+                        'rgba(255, 0, 255, 0.2)',
+                        'rgba(255, 255, 0, 0.2)'],
+
+                    borderWidth: 1
+                }],
+
+
+
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                labels: [
+                    'White',
+                    'Black',
+                    'Asian',
+                    'Latino',
+                    'Other',
+                    'Native American',
+                    'Unclear'
+                ]
+            },
+            options: {
+                cutoutPercentage: 50
+            }
+        });
+
+
+    </script>
+
+<script>
+
+    var map;
+
+    function initMap() {
+
+        var customMapType = new google.maps.StyledMapType([
+            {
+                featureType: 'administrative',
+                elementType: 'labels',
+                stylers: [{visibility: 'off'}],
+                mapTypeId: 'terrain'
+            }
+        ], {
+            name: 'Custom Style'
+        });
+        var customMapTypeId = 'custom_style';
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: {lat: 42.36, lng: -71.06},  // Brooklyn.
+            mapTypeId: 'roadmap',
+            disableDefaultUI: true,
+            gestureHandling: 'none',
+            zoomControl: false
+        });
+        map.mapTypes.set(customMapTypeId, customMapType);
+    }
+
+    var panPath = [];   // An array of points the current panning action will use
+    var panQueue = [];  // An array of subsequent panTo actions to take
+    var STEPS = 50;     // The number of steps that each panTo action will undergo
+
+    var zScale;
+
+    function panTo(newLat, newLng) {
+
+        if (panPath.length > 0) {
+            // We are already panning...queue this up for next move
+            panQueue.push([newLat, newLng]);
+        } else {
+            // Lets compute the points we'll use
+            panPath.push("LAZY SYNCRONIZED LOCK");  // make length non-zero - 'release' this before calling setTimeout
+            var curLat = map.getCenter().lat();
+            var curLng = map.getCenter().lng();
+            var dLat = (newLat - curLat)/STEPS;
+            var dLng = (newLng - curLng)/STEPS;
+
+            for (var i=0; i < STEPS; i++) {
+                panPath.push([curLat + dLat * i, curLng + dLng * i]);
+            }
+            panPath.push([newLat, newLng]);
+            panPath.shift();      // LAZY SYNCRONIZED LOCK
+            setTimeout(doPan, 1);
+        }
+    }
+
+    function doPan() {
+
+        var next = panPath.shift();
+        if (next != null) {
+
+            // Continue our current pan action
+            map.panTo( new google.maps.LatLng(next[0], next[1]));
+
+            setTimeout(doPan, 1);
+        } else {
+            // We are finished with this pan - check if there are any queue'd up locations to pan to
+            var queued = panQueue.shift();
+            if (queued != null) {
+                panTo(queued[0], queued[1]);
+            }
+        }
+    }
+
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?signed_in=false&callback=initMap"
+        async defer></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+
+
+    <!--<script src="chart/Chart.bundle.js"></script>-->
+
+</body>
+</html>
