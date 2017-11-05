@@ -17,7 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="chart.js/dist/Chart.min.js"></script>
 
     <script src="p5.min.js"></script>
     <style>
@@ -223,7 +223,7 @@
         <p class="lead"><h2 id="Total Shootings">Age</h2></p>
         <hr class="my-4">
         <p align="center"><b>Shooter's Race</b></p>
-        <canvas id="myChart" width=100% height=25%></canvas>
+        <canvas id="myChart" width=100% height=20%></canvas>
         <div class="row">
             <div class="col-sm">
                 <p align="center"><b>Average Age: </b> <p align="center" id="Avg Age"></p> </p>
@@ -264,11 +264,11 @@
             } else {
                 Alert.statOut();
 
-                if (count !== 0 && count < i) {
+                if (count !== -1 && count < i) {
                     Alert.infoIn();
                     Alert.shootIn();
                 } else {
-                    if (count !== 0) {
+                    if (count !== -1) {
                         Alert.endIn();
                     } else {
                         Alert.startIn();
@@ -347,7 +347,7 @@
             };
             $('#clickMe').click(function() {
 
-                if (count !== 0 && count < i) {
+                if (count !== -1 && count < i) {
 
                     Alert.info();
                 }
