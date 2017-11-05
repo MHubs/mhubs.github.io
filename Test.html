@@ -262,7 +262,7 @@
             } else {
                 Alert.statOut();
 
-                if (count !== -1 && count < i) {
+                if (count !== -1 && count <= i) {
                     Alert.infoIn();
                     Alert.shootIn();
                 } else {
@@ -373,7 +373,7 @@
             xobj.send(null);
         }
 
-        var count = -1;
+        var count = 92;
         var actual_JSON;
 
 
@@ -392,7 +392,7 @@
             } else {
 
 
-                if (count === i) {
+                if (count === i + 1) {
 
                     Alert.out($('#Shooter'));
                     Alert.out($('#Info'));
@@ -520,6 +520,7 @@
         }
 
         var i = 0;
+        var t = 0;
 
         function load() {
 
@@ -544,16 +545,21 @@
 
                     for (a in n) {
 
-                        low = Math.min(low, n[a].split(", ")[1]);
-                        high = Math.max(high, n[a].split(", ")[1]);
-                        avg = parseInt(avg) + parseInt(n[a].split(", ")[1]);
+                        if (n[a].split(", ").length > 1) {
 
+                            low = Math.min(low, n[a].split(", ")[1]);
+                            high = Math.max(high, n[a].split(", ")[1]);
+                            avg = parseInt(avg) + parseInt(n[a].split(", ")[1]);
+
+                            i = i + 1;
+
+                        }
                     }
 
                     dead = dead + parseInt(actual_JSON["USMassShootings"][0][x]["Fatalities"]);
                     injured = injured + parseInt(actual_JSON["USMassShootings"][0][x]["Injured"]);
 
-                    i = i + 1;
+                    t = t + 1;
                 }
 
 
@@ -562,7 +568,7 @@
                 document.getElementById("High Age").innerHTML = high + "";
                 document.getElementById("Low Age").innerHTML = low + "";
                 document.getElementById("Avg Age").innerHTML = avg + "";
-                document.getElementById("Total Shootings").innerHTML = i + " Total Shootings*";
+                document.getElementById("Total Shootings").innerHTML = t + " Total Shootings*";
                 document.getElementById("Deaths").innerHTML = dead + "+";
                 document.getElementById("Injuries").innerHTML = injured + "+";
             });

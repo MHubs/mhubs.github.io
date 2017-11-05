@@ -1,11 +1,4 @@
-{
-   "Info": {
-       "Username": "Maxswell"
-   },
-
-   "Fines": {
-       "ID1": "Day 4"
-
-   }
-
-}
+$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+$computedString = "Hi, " . $name;
+$array = ['userName' => $name, 'computedString' => $computedString];
+echo json_encode($array);
