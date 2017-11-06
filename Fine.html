@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fine</title>
+    <title>Fine (0.00001)</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
                 var response = JSON.parse(httpRequest.responseText);
                 alert(response.computedString);
             } else {
-                alert('There was a problem with the request.');
+                alert('There was a problem with the request.', httpRequest.statusText);
             }
         }
     }
