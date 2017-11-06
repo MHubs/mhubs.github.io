@@ -52,11 +52,16 @@
             -webkit-transition: background-color 1s, color 1s, text 1s;
             -o-transition: background-color 1s, color 1s, text 1s;
 
-            background-color: rgba(250, 250, 250, 1);
+            background-color: rgba(250, 250, 250, 0.5);
 
-            color: rgba(0, 0, 0, 1);
+            color: rgba(0, 0, 0, 0.5);
 
             display: none;
+        }
+
+        #End:hover {
+            background-color: rgba(250, 250, 250, 1);
+            color: rgba(0, 0, 0, 1);
         }
 
         #Start {
@@ -148,8 +153,8 @@
     <div id="map"></div>
     <!--panTo(37.775,-122.419);-->
     <div class="alert alert-danger" role="alert" id="notEnough">
-        <h4 class="alert-heading">Not enough!</h4>
-        <p>There was another attack. Maybe if you pray more it won't happen again!</p>
+        <h4 class="alert-heading" align="center">Thoughts and Prayers can only do so much</h4>
+        <p align="center">There was another attack. Thoughts and Prayers couldn't stop it.</p>
     </div>
     <button type="button" id="clickMe" class="btn btn-primary btn-lg btn-block"><span id="clickMeSpan">Begin</span></button>
 
@@ -258,11 +263,13 @@
                 Alert.shootOut();
                 Alert.endOut();
 
+                myChart.Animation.animationObject
+
                 open = true;
             } else {
                 Alert.statOut();
 
-                if (count !== -1 && count <= i) {
+                if (count !== -1 && count < i) {
                     Alert.infoIn();
                     Alert.shootIn();
                 } else {
@@ -392,7 +399,7 @@
             } else {
 
 
-                if (count === i + 1) {
+                if (count === i) {
 
                     Alert.out($('#Shooter'));
                     Alert.out($('#Info'));
@@ -402,7 +409,11 @@
                         $('#clickMeSpan').text("Replay").animate({opacity: 1}, 1000);
                     });
 
+                    panTo(39.8097, -98.5556);
+                    map.setZoom(4);
+
                 } else {
+
 
                     Alert.out($('#Start'));
                     Alert.i($('#Shooter'));
@@ -513,8 +524,9 @@
                     var lat = actual_JSON["USMassShootings"][0][shootings[count]]["latitude"];
                     var long = actual_JSON["USMassShootings"][0][shootings[count]]["longitude"];
 
-                    panTo(lat, long);
 
+                    panTo(lat, long);
+                    map.setZoom(10);
                 }
             }
         }
@@ -551,7 +563,7 @@
                             high = Math.max(high, n[a].split(", ")[1]);
                             avg = parseInt(avg) + parseInt(n[a].split(", ")[1]);
 
-                            i = i + 1;
+                            t = t + 1;
 
                         }
                     }
@@ -559,16 +571,19 @@
                     dead = dead + parseInt(actual_JSON["USMassShootings"][0][x]["Fatalities"]);
                     injured = injured + parseInt(actual_JSON["USMassShootings"][0][x]["Injured"]);
 
-                    t = t + 1;
+                    i = i + 1;
+
+                    addCircle(x, actual_JSON["USMassShootings"][0][x]["Total victims"], actual_JSON["USMassShootings"][0][x]["latitude"], actual_JSON["USMassShootings"][0][x]["longitude"]);
+
                 }
 
 
-                avg = Math.round(avg / i);
+                avg = Math.round(avg / t);
 
                 document.getElementById("High Age").innerHTML = high + "";
                 document.getElementById("Low Age").innerHTML = low + "";
                 document.getElementById("Avg Age").innerHTML = avg + "";
-                document.getElementById("Total Shootings").innerHTML = t + " Total Shootings*";
+                document.getElementById("Total Shootings").innerHTML = i + " Total Shootings*";
                 document.getElementById("Deaths").innerHTML = dead + "+";
                 document.getElementById("Injuries").innerHTML = injured + "+";
             });
@@ -635,7 +650,6 @@
             }
         });
 
-
     </script>
 
 <script>
@@ -657,8 +671,8 @@
         var customMapTypeId = 'custom_style';
 
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: {lat: 42.36, lng: -71.06},  // Brooklyn.
+            zoom: 4,
+            center: {lat: 39.8097, lng: -98.5556},  // Brooklyn.
             mapTypeId: 'roadmap',
             disableDefaultUI: true,
             gestureHandling: 'none',
@@ -711,6 +725,54 @@
                 panTo(queued[0], queued[1]);
             }
         }
+    }
+
+    function zoomTo(level) {
+
+        var s = (level - map.getZoom()) / STEPS;
+
+        setTimeout(doZoom(s, 1), 1);
+
+    }
+
+    function doZoom(s, step) {
+
+        if (step <= STEPS) {
+            map.setZoom(map.getZoom() + s);
+
+            setTimeout(doZoom(s, step + 1), 1);
+        }
+
+    }
+
+    function addCircle(title, kills, lat, long) {
+
+        if (kills > 75) {
+
+            kills = kills / 4;
+
+        }
+
+
+        var cityCircle = new google.maps.Marker({
+            icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: kills,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+            },
+
+            draggable: false,
+
+            map: map,
+            position: {lat: lat, lng: long},
+            title: title
+
+        });
+
     }
 
 </script>

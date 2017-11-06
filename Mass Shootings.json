@@ -2108,7 +2108,7 @@
       "Summary" : "Esteban Santiago, 26, flew from Alaska to Fort Lauderdale, where he opened fire in the baggage claim area of the airport, killing five and wounding six before police aprehended him. ",
       "Fatalities" : 5,
       "Injured" : 6,
-      "Total victims" : "11 (dozens more were injured in the panic)",
+      "Total victims" : 11,
       "Venue" : "Airport",
       "Prior signs of mental health issues" : "Yes",
       "Mental health - details" : "Among other signs, Santiago had gone to a FBI office in Anchorage and complained that his mind was being controlled by the CIA.",
@@ -2347,7 +2347,7 @@
       "latitude" : 29.2888,
       "longitude" : -98.0509,
       "Type" : "Mass",
-      "Shooter" : "TBD"
+      "Shooter" : "David P. Kelley, 26"
     }}],
   "Pivot Table 1" : {
     "White" : {
