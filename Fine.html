@@ -45,7 +45,7 @@
                 var response = JSON.parse(httpRequest.responseText);
                 alert(response.computedString);
             } else {
-                alert('There was a problem with the request.' + httpRequest.statusText);
+                alert('There was a problem with the request. ' + httpRequest.statusText + ' ' + httpRequest.status);
             }
         }
     }
