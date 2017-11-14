@@ -2325,7 +2325,7 @@
       "Shooter" : "Scott Allen Ostrem, 47"
     },
     "Texas church mass shooting": {
-      "Case" : "Texas church mass shooting",
+      "Case" : "Texas First Baptist Church Massacre",
       "Location" : "Sutherland Springs, TX",
       "Date" : "2017-11-05T07:00:00.000Z",
       "Year" : 2017,
@@ -2348,7 +2348,34 @@
       "longitude" : -98.0509,
       "Type" : "Mass",
       "Shooter" : "David P. Kelley, 26"
-    }}],
+    },
+    "Rancho Tehama School Schooting": {
+      "Case" : "Rancho Tehama School Schooting",
+      "Location" : "Rancho Tehama, CA",
+      "Date" : "2017-11-14T07:00:00.000Z",
+      "Year" : 2017,
+      "Summary" : "STORY PENDING",
+      "Fatalities" : 5,
+      "Injured" : 10,
+      "Total victims" : 15,
+      "Venue" : "School",
+      "Prior signs of mental health issues" : "UNKNOWN",
+      "Mental health - details" : "TBD",
+      "Weapons obtained legally" : "TBD",
+      "Where obtained" : "TBD",
+      "Type of weapons" : "semiautomatic weapon, handguns",
+      "Weapon details" : "TBD",
+      "Race" : "PENDING",
+      "Gender" : "PENDING",
+      "Sources" : "https://www.cbsnews.com/news/rancho-tehama-school-shooting-elementary-students-hospitalized-following-deadly-calif-shootings-officials/",
+      "Mental Health Sources" : "",
+      "latitude" : 40.0007,
+      "longitude" : -122.4580,
+      "Type" : "Mass",
+      "Shooter" : "PENDING"
+    }
+
+  }],
   "Pivot Table 1" : {
     "White" : {
       "White " : "White",
