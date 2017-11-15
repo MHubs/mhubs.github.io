@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+    <script>
+
+        loadJSON("Mass Shootings.json", function(response) {
+
+            document.getElementById("JSON").innerHTML = response;
+
+        });
+
+        window.webkitRequestFileSystem(Window.TEMPORARY, 1024*1024, SaveDatFileBro);
+        window.webkitRequestFileSystem(Window.PERSISTENT , 1024*1024, SaveDatFileBro);
+
+        function loadJSON(file, callback) {
+
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                    callback(xobj.responseText);
+
+                }
+            };
+            xobj.send(null);
+        }
+
+        function SaveDatFileBro(localstorage) {
+            localstorage.root.getFile("info.txt", {create: true}, function(DatFile) {
+                DatFile.createWriter(function(DatContent) {
+                    var blob = new Blob(["Lorem Ipsum"], {type: "text/plain"});
+                    DatContent.write(blob);
+                });
+            });
+        }
+
+    </script>
+
+
+</head>
+
+<p id="JSON"></p>
+
+</html>
