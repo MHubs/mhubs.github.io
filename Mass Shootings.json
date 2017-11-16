@@ -2350,29 +2350,29 @@
       "Shooter" : "David P. Kelley, 26"
     },
     "Rancho Tehama Schooting": {
-      "Case" : "Rancho Tehama Schooting",
+      "Case" : "Rancho Tehama shooting spree",
       "Location" : "Rancho Tehama, CA",
       "Date" : "2017-11-14T07:00:00.000Z",
       "Year" : 2017,
-      "Summary" : "STORY PENDING",
+      "Summary" : "Kevin Janson Neal, 44, went on an approximately 45-minute shooting spree in the rural community of Rancho Tehama Reserve in Northern California, including shooting up an elementary school, before being killed by law enforcement officers. Neal had also killed his wife at home.",
       "Fatalities" : 5,
       "Injured" : 10,
       "Total victims" : 15,
-      "Venue" : "School",
+      "Venue" : "Other",
       "Prior signs of mental health issues" : "UNKNOWN",
       "Mental health - details" : "TBD",
       "Weapons obtained legally" : "No",
       "Where obtained" : "TBD",
       "Type of weapons" : "semiautomatic weapon, handguns",
-      "Weapon details" : "TBD",
+      "Weapon details" : "Two illegally modified rifles",
       "Race" : "White",
       "Gender" : "Male",
-      "Sources" : "https://www.cbsnews.com/news/rancho-tehama-school-shooting-elementary-students-hospitalized-following-deadly-calif-shootings-officials/",
+      "Sources" : "https://www.nbcnews.com/news/us-news/california-mass-shooter-killed-wife-buried-her-beneath-floor-n821051; https://www.npr.org/sections/thetwo-way/2017/11/15/564335359/in-harm-s-way-school-staff-saved-students-during-tehama-county-shooting; https://twitter.com/anblanx/status/930862796123729920",
       "Mental Health Sources" : "",
       "latitude" : 40.0007,
       "longitude" : -122.4580,
-      "Type" : "Mass",
-      "Shooter" : "Kevin Janson Neal, 43"
+      "Type" : "Spree",
+      "Shooter" : "Kevin Janson Neal, 44"
     }
 
   }],
