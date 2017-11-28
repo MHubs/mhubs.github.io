@@ -15,21 +15,63 @@
         window.webkitRequestFileSystem(Window.PERSISTENT , 1024*1024, SaveDatFileBro);
 
         //GITHUB API
+
 if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function () {
-        document.getElementById("JSON").innerHTML = event.beta + " " + event.gamma;
-    }, true);
-} else if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', function () {
-       // tilt([event.acceleration.x * 2, event.acceleration.y * 2]);
-        document.getElementById("motion").innerHTML = event.acceleration.x * 2;
-    }, true);
-} else {
-    window.addEventListener("MozOrientation", function () {
-        //tilt([orientation.x * 50, orientation.y * 50]);
-    }, true);
+    window.addEventListener('deviceorientation', function(eventData) {
+
+        document.getElementById("Orientation").innerHTML = "Orientation: " + eventData.gamma + " " + eventData.beta + " " + eventData.alpha;
+
+    }, false);
 }
 
+if (window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', function(eventData) {
+
+        document.getElementById("Acceleration").innerHTML = "Acceleration: " + eventData.acceleration.x + " " + eventData.acceleration.y + " " + eventData.acceleration.x;
+
+    }, false);
+}
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success);
+}
+
+var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+
+function logBattery(battery) {
+    console.log(battery.level);
+    console.log(battery.charging);
+    console.log(battery.dischargingTime);
+
+    document.getElementById("Battery").innerHTML = 'Level: ' + battery.level + " " + 'Charging: ' + battery.charging + ' Discharging: ' + battery.dischargingTime;
+
+    battery.addEventListener('chargingchange', function() {
+        console.log('Battery chargingchange event: ' + battery.charging);
+    }, false);
+}
+
+if (navigator.getBattery) {
+    navigator.getBattery().then(logBattery);
+} else if (battery) {
+    logBattery(battery);
+}
+
+var vibrate = navigator.vibrate || navigator.mozVibrate;
+
+// vibrate for 1 second
+vibrate(1000);
+
+// vibrate for 1 second, then pause for half, then vibrate for another 1 second
+vibrate([1000, 500, 2000]);
+
+function success(position) {
+
+    document.getElementById("Location").innerHTML = 'Latitude: ' + position.coords.latitude + " " + 'Longitude: ' + position.coords.longitude;
+
+
+    console.log('Latitude: ' + position.coords.latitude);
+    console.log('Longitude: ' + position.coords.longitude);
+}
 
         function loadJSON(file, callback) {
 
@@ -60,7 +102,9 @@ if (window.DeviceOrientationEvent) {
 
 </head>
 
-<p id="JSON">TESTING</p>
-<p id="motion">TESTING</p>
+<p id="Orientation">TESTING</p>
+<p id="Acceleration">TESTING</p>
+<p id="Location">TESTING</p>
+<p id="Battery">TESTING</p>
 
 </html>
