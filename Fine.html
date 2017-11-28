@@ -22,6 +22,7 @@ if (window.DeviceOrientationEvent) {
 } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {
        // tilt([event.acceleration.x * 2, event.acceleration.y * 2]);
+        document.getElementById("motion").innerHTML = event.acceleration.x * 2;
     }, true);
 } else {
     window.addEventListener("MozOrientation", function () {
@@ -60,5 +61,6 @@ if (window.DeviceOrientationEvent) {
 </head>
 
 <p id="JSON">TESTING</p>
+<p id="motion">TESTING</p>
 
 </html>
