@@ -10,5 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="p5.dom" level="application" />
     <orderEntry type="library" name="p5" level="application" />
+    <orderEntry type="library" name="GitHub" level="application" />
+    <orderEntry type="library" name="GitHub.bundle" level="application" />
   </component>
 </module>

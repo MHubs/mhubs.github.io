@@ -4,14 +4,22 @@
 
     <script>
 
-        loadJSON("Mass Shootings.json", function(response) {
+//        loadJSON("Mass Shootings.json", function(response) {
+//
+//            document.getElementById("JSON").innerHTML = response;
+//
+//        });
 
-            document.getElementById("JSON").innerHTML = response;
-
-        });
 
         window.webkitRequestFileSystem(Window.TEMPORARY, 1024*1024, SaveDatFileBro);
         window.webkitRequestFileSystem(Window.PERSISTENT , 1024*1024, SaveDatFileBro);
+
+        //GITHUB API
+if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+    document.getElementById("JSON").innerText = "Supported!";
+}
+
 
         function loadJSON(file, callback) {
 
