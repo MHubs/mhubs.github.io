@@ -2,109 +2,415 @@
 
 <head>
 
+    <script src="github-api/dist/GitHub.bundle.js"></script>
+
     <script>
 
-//        loadJSON("Mass Shootings.json", function(response) {
-//
-//            document.getElementById("JSON").innerHTML = response;
-//
-//        });
 
-
-        window.webkitRequestFileSystem(Window.TEMPORARY, 1024*1024, SaveDatFileBro);
-        window.webkitRequestFileSystem(Window.PERSISTENT , 1024*1024, SaveDatFileBro);
-
-        //GITHUB API
-
-if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', function(eventData) {
-
-        document.getElementById("Orientation").innerHTML = "Orientation: " + eventData.gamma + " " + eventData.beta + " " + eventData.alpha;
-
-    }, false);
-}
-
-if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', function(eventData) {
-
-        document.getElementById("Acceleration").innerHTML = "Acceleration: " + eventData.acceleration.x + " " + eventData.acceleration.y + " " + eventData.acceleration.x;
-
-    }, false);
-}
-
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success);
-}
-
-var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
-
-function logBattery(battery) {
-    console.log(battery.level);
-    console.log(battery.charging);
-    console.log(battery.dischargingTime);
-
-    document.getElementById("Battery").innerHTML = 'Level: ' + battery.level + " " + 'Charging: ' + battery.charging + ' Discharging: ' + battery.dischargingTime;
-
-    battery.addEventListener('chargingchange', function() {
-        console.log('Battery chargingchange event: ' + battery.charging);
-    }, false);
-}
-
-if (navigator.getBattery) {
-    navigator.getBattery().then(logBattery);
-} else if (battery) {
-    logBattery(battery);
-}
-
-var vibrate = navigator.vibrate || navigator.mozVibrate;
-
-// vibrate for 1 second
-vibrate(1000);
-
-// vibrate for 1 second, then pause for half, then vibrate for another 1 second
-vibrate([1000, 500, 2000]);
-
-function success(position) {
-
-    document.getElementById("Location").innerHTML = 'Latitude: ' + position.coords.latitude + " " + 'Longitude: ' + position.coords.longitude;
-
-
-    console.log('Latitude: ' + position.coords.latitude);
-    console.log('Longitude: ' + position.coords.longitude);
-}
-
-        function loadJSON(file, callback) {
-
-            var xobj = new XMLHttpRequest();
-            xobj.overrideMimeType("application/json");
-            xobj.open('GET', file, true); // Replace 'my_data' with the path to your file
-            xobj.onreadystatechange = function () {
-                if (xobj.readyState == 4 && xobj.status == "200") {
-                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                    callback(xobj.responseText);
-
-                }
-            };
-            xobj.send(null);
-        }
-
-        function SaveDatFileBro(localstorage) {
-            localstorage.root.getFile("info.txt", {create: true}, function(DatFile) {
-                DatFile.createWriter(function(DatContent) {
-                    var blob = new Blob(["Lorem Ipsum"], {type: "text/plain"});
-                    DatContent.write(blob);
-                });
+        function GithubAPI() {
+            let repo;
+            let filesToCommit = [];
+            let currentBranch = {};
+            let newCommit = {};
+            this.gh = new GitHub({
+                username: 'mhubs',
+                password: 'redsox08'
+                /* also acceptable:
+                   token: 'MY_OAUTH_TOKEN'
+                 */
             });
+
+            this.setRepo = function (userName, repoName) {
+                repo = this.gh.getRepo(userName, repoName);
+                console.log(repo);
+            };
+
+            this.setBranch = function (branchName) {
+                return repo.listBranches()
+                    .then((branches) => {
+                        let branchExists = branches.data
+                            .find(branch => branch.name === branchName);
+                        if (!branchExists) {
+                            return repo.createBranch('master', branchName)
+                                .then(() => {
+                                    currentBranch.name = branchName;
+                                });
+                        } else {
+                            currentBranch.name = branchName;
+                        }
+                    });
+            };
+
+            this.pushFiles = function (message, files) {
+                return getCurrentCommitSHA()
+                    .then(getCurrentTreeSHA)
+                    .then(() => createFiles(files))
+                    .then(createTree)
+                    .then(() => createCommit(message))
+                    .then(updateHead)
+                    .catch((e) => {
+                        console.error(e);
+                    });
+            };
+
+            function getCurrentCommitSHA() {
+                return repo.getRef('heads/' + currentBranch.name)
+                    .then((ref) => {
+                        currentBranch.commitSHA = ref.data.object.sha;
+                    });
+            }
+
+            function getCurrentTreeSHA() {
+                return repo.getCommit(currentBranch.commitSHA)
+                    .then((commit) => {
+                        currentBranch.treeSHA = commit.data.tree.sha;
+                    });
+            }
+
+            function createFiles(files) {
+                let promises = [];
+                let length = files.length;
+                for (let i = 0; i < length; i++) {
+                    promises.push(createFile(files[i]));
+                }
+                return Promise.all(promises);
+            }
+
+            function createFile(file) {
+                return repo.createBlob(file.content)
+                    .then((blob) => {
+                        filesToCommit.push({
+                            sha: blob.data.sha,
+                            path: file.path,
+                            mode: '100644',
+                            type: 'blob'
+                        });
+                    });
+            }
+
+            function createTree() {
+                return repo.createTree(filesToCommit, currentBranch.treeSHA)
+                    .then((tree) => {
+                        newCommit.treeSHA = tree.data.sha;
+                    });
+            }
+
+            function createCommit(message) {
+                return repo.commit(currentBranch.commitSHA, newCommit.treeSHA, message)
+                    .then((commit) => {
+                        newCommit.sha = commit.data.sha;
+                    });
+            }
+
+            function updateHead() {
+                return repo.updateHead(
+                    'heads/' + currentBranch.name,
+                    newCommit.sha
+                );
+            }
+
+            this.getFile = function (path) {
+
+
+                return repo.getContents('master', path, 'true').then((file) => {
+                    return JSON.stringify(file.data);
+                }).catch((e) => {
+                    return null;
+                });
+
+            }
+
+            this.removeFile = function(branch, path) {
+
+                return repo.getSha(branch, path)
+                    .then((response) => {
+
+                    console.log(response.headers.etag);
+
+                        const deleteCommit = {
+                            message: `Delete the file at '${path}'`,
+                            sha: response.headers.etag.substring(1, response.headers.etag.length - 1)
+                        };
+
+                        console.log(`/repos/${repo.__fullname}/contents/${path}`);
+
+                        return repo._request('DELETE', `/repos/${repo.__fullname}/contents/${path}`, deleteCommit, null);
+                    });
+
+//                return repo.deleteFile('master', path).then((file) => {
+//                    return file;
+//                }).catch((e) => {
+//                    console.log(e);
+//                    return null;
+//                });
+            }
+
+
         }
 
+        let api = new GithubAPI();
+        api.setRepo('MHubs', 'mhubs.github.io');
+
+
+        //
+        //api.getFile('Mass Shootings.json').then((file) => {
+        //
+        //    let json = JSON.parse(file);
+        //
+        //    json["USMassShootings"][0]["Welding shop shooting"]["Shooter"] = "Carl Robert Brown, 51";
+        //
+        //    api.setBranch('master')
+        //        .then( () => api.pushFiles(
+        //            'Testing Changing Up Stuff',
+        //            [
+        //                {content: JSON.stringify(json), path: 'Mass Shootings.json'},
+        //            ])
+        //        )
+        //        .then(function() {
+        //            document.getElementById("Battery").innerHTML = "Files Committed";
+        //            console.log('Files committed!');
+        //        });
+        //
+        //});
     </script>
 
 
 </head>
 
-<p id="Orientation">TESTING</p>
-<p id="Acceleration">TESTING</p>
-<p id="Location">TESTING</p>
+<body>
 <p id="Battery">TESTING</p>
+<script>
+    // NOTES:
+    // USERNAME is converted to ID in app and sent.
+    // PASSWORD is encrypted upon arrival and is stored as random letter/number combo
+
+
+    //          AUTHENTICATION / USERS
+
+    // ?auth=ID&password=PASSWORD -> JSON USER INFO/NULL (Authenticates user and sends info)
+    // ?auth=ID&userProperty=PROPERTY&value=VALUE -> SUCCESS/FAIL (Change User Property)
+    // ?auth=ID&getUserProperty=PROPERTY -> STRING User Property/NULL (Get User Property)
+
+
+    //          CREATE USERS
+
+    // ?createUser=ID&password=PASSWORD -> JSON USER INFO (Creates and authenticates user)
+
+
+    //          DELETE USERS
+
+    // ?deleteUser=ID&password=PASSWORD -> SUCCESS/FAIL (Deletes user)
+
+
+    //          FINES
+    // ?auth=ID&fine=ID -> BLOB Fine/null (Get Fine)
+    // ?auth=ID&fineInfo=ID -> JSON Fine Info/NULL (Get Fine Info)
+    // ?auth=ID&getFineList=TRUE -> JSON Fine IDS (List Fines)
+    // ?auth=ID&createFine=ID&name=NAME&data=BLOB -> SUCCESS/FAIL (Creates Fine)
+    // ?auth=ID&deleteFine=ID -> SUCCESS/FAIL (Deletes Fine)
+
+    //          FINE COMPS
+    // ?auth=ID&createComp=[ID]&comp=ID&name=NAME -> SUCCESS/FAIL (creates comp)
+    // ?auth=ID&comp=ID -> [ID] and Name / NULL (Lists Fines in comp)
+    // ?auth=ID&deleteComp=ID -> SUCCESS/FAIL (deletes comp)
+
+
+    console.log(window.location.href);
+
+    let request = window.location.href.split("?")[1];
+
+    console.log(request);
+
+    if (request === null || request === "") {
+        document.getElementById("Battery").innerHTML = "Bad Request";
+
+
+    } else {
+        let response = "Bad Request";
+        let split = request.split("&");
+
+        if (split.length === 2) {
+
+            sp1 = split[0].split("=");
+            sp2 = split[1].split("=");
+
+
+            if (sp1[0] === "deleteUser" && sp2[0] === "password") {
+                response = "Delete User Request";
+                deleteUser(sp1[1], sp2[1]);
+            }
+            if (sp1[0] === "auth" && sp2[0] === "password") {
+                response = "Authenticate User Request";
+                authenticate(sp1[1], sp2[1]);
+            }
+            if (sp1[0] === "auth" && sp2[0] === "getUserProperty") {
+                response = "User Property Request";
+                getUserProperty(sp1[1], sp2[1]);
+            }
+            if (sp1[0] === "auth" && sp2[0] === "fine") {
+                response = "Fine Request";
+            }
+            if (sp1[0] === "auth" && sp2[0] === "fineInfo") {
+                response = "Fine Info Request";
+            }
+            if (sp1[0] === "auth" && sp2[0] === "fineList") {
+                response = "Fine List Request";
+            }
+            if (sp1[0] === "auth" && sp2[0] === "deleteFine") {
+                response = "Fine Delete Request";
+            }
+            if (sp1[0] === "auth" && sp2[0] === "comp") {
+                response = "Comp Request";
+            }
+            if (sp1[0] === "auth" && sp2[0] === "deleteComp") {
+                response = "Delete Comp Request";
+            }
+        }
+
+        if (split.length === 3) {
+            sp1 = split[0].split("=");
+            sp2 = split[1].split("=");
+            sp3 = split[2].split("=");
+
+            if (sp1[0] === "auth" && sp2[0] === "userProperty" && sp3[0] === "value") {
+                response = "Set User Property Request";
+            }
+
+            if (sp1[0] === "createUser" && sp2[0] === "password" && sp3[0] === "email") {
+                response = "Create User Request";
+                createUser(sp1[1], sp2[1], sp3[1]);
+            }
+        }
+
+        if (split.length === 4) {
+            sp1 = split[0].split("=");
+            sp2 = split[1].split("=");
+            sp3 = split[2].split("=");
+            sp4 = split[3].split("=");
+
+            if (sp1[0] === "auth" && sp2[0] === "createFine" && sp3[0] === "name" && sp4[0] === "data") {
+                response = "Create Fine Request";
+            }
+
+            if (sp1[0] === "auth" && sp2[0] === "createComp" && sp3[0] === "comp" && sp4[0] === "name") {
+                response = "Create Fine Request";
+            }
+
+        }
+
+
+        document.getElementById("Battery").innerHTML = response;
+
+
+
+    }
+
+    function deleteUser(id, pass) {
+        api.getFile(id + ".json").then((file) =>{
+
+            if (file !== null) {
+
+                let json = JSON.parse(file);
+
+                if (json["Password"] === pass) {
+
+                    //Possibly have to remove other things too
+                    api.removeFile('master', id + ".json").then((response) => {
+
+                        document.getElementById("Battery").innerHTML = "Deleted User";
+
+                    });
+
+
+                } else {
+                    document.getElementById("Battery").innerHTML = "Incorrect Password";
+                }
+
+
+            } else {
+                document.getElementById("Battery").innerHTML = "User Not Found";
+            }
+
+        });
+    }
+
+    function authenticate(id, pass) {
+        api.getFile(id + ".json").then((file) =>{
+
+           if (file !== null) {
+
+               let json = JSON.parse(file);
+
+               if (json["Password"] === pass) {
+                   document.getElementById("Battery").innerHTML = JSON.stringify(json)
+               } else {
+                   document.getElementById("Battery").innerHTML = "Incorrect Password";
+               }
+
+
+           } else {
+               document.getElementById("Battery").innerHTML = "User Not Found";
+           }
+
+        });
+    }
+
+    function getUserProperty(id, prop) {
+        api.getFile(id + ".json").then((file) =>{
+
+            if (file !== null) {
+
+                let json = JSON.parse(file);
+
+
+                    document.getElementById("Battery").innerHTML = json[prop];
+
+
+
+            } else {
+                document.getElementById("Battery").innerHTML = "User Not Found";
+            }
+
+        });
+    }
+
+
+    function createUser(id, pass, email) {
+
+        api.getFile("Default_User.json").then((file) => {
+
+            var json = JSON.parse(file);
+
+            json["ID"] = id;
+            json["Password"] = pass;
+            json["Creation"] = new Date().toJSON();
+            json["LastLogin"] = new Date().toJSON();
+            json["Email"] = email;
+
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            api.setBranch('master')
+                .then(() => api.pushFiles(
+                    'Adding User: ' + id,
+                    [
+                        {content: JSON.stringify(json), path: id + '.json'},
+                    ])
+                )
+                .then(function () {
+                    document.getElementById("Battery").innerHTML = "Files Committed";
+                    console.log('Files committed!');
+                });
+
+        });
+
+
+
+    }
+
+</script>
+
+</body>
+
 
 </html>
