@@ -6,6 +6,10 @@
 
     <script>
 
+        /*
+        MIGRATE TO SWIFT FOR BETTER EASE OF USE
+         */
+
 
         function GithubAPI() {
             let repo;
@@ -19,6 +23,10 @@
                    token: 'MY_OAUTH_TOKEN'
                  */
             });
+
+            this.getRepo = function(){
+                return repo;
+            };
 
             this.setRepo = function (userName, repoName) {
                 repo = this.gh.getRepo(userName, repoName);
@@ -120,6 +128,12 @@
 
             }
 
+            this.getFine = function(sha) {
+
+                return repo._request('GET', `/repos/${repo.__fullname}/git/blobs/${sha}`);
+
+            }
+
             this.removeFile = function(branch, path) {
 
                 return repo.getSha(branch, path)
@@ -137,14 +151,18 @@
                         return repo._request('DELETE', `/repos/${repo.__fullname}/contents/${path}`, deleteCommit, null);
                     });
 
-//                return repo.deleteFile('master', path).then((file) => {
-//                    return file;
-//                }).catch((e) => {
-//                    console.log(e);
-//                    return null;
-//                });
             }
 
+            this.createBlob = function(content) {
+                if (typeof content === 'object') {
+                    postBody = content;
+                } else {
+                    postBody = repo._getContentObject(content);
+                }
+
+                console.log('sending content', postBody);
+                return repo._request('POST', `/repos/${repo.__fullname}/git/blobs`, postBody, null);
+            }
 
         }
 
@@ -152,26 +170,6 @@
         api.setRepo('MHubs', 'mhubs.github.io');
 
 
-        //
-        //api.getFile('Mass Shootings.json').then((file) => {
-        //
-        //    let json = JSON.parse(file);
-        //
-        //    json["USMassShootings"][0]["Welding shop shooting"]["Shooter"] = "Carl Robert Brown, 51";
-        //
-        //    api.setBranch('master')
-        //        .then( () => api.pushFiles(
-        //            'Testing Changing Up Stuff',
-        //            [
-        //                {content: JSON.stringify(json), path: 'Mass Shootings.json'},
-        //            ])
-        //        )
-        //        .then(function() {
-        //            document.getElementById("Battery").innerHTML = "Files Committed";
-        //            console.log('Files committed!');
-        //        });
-        //
-        //});
     </script>
 
 
@@ -179,6 +177,8 @@
 
 <body>
 <p id="Battery">TESTING</p>
+<input id="Image" type="file" onchange="sendFine()">
+<video id="i"> </video>
 <script>
     // NOTES:
     // USERNAME is converted to ID in app and sent.
@@ -205,7 +205,7 @@
     //          FINES
     // ?auth=ID&fine=ID -> BLOB Fine/null (Get Fine)
     // ?auth=ID&fineInfo=ID -> JSON Fine Info/NULL (Get Fine Info)
-    // ?auth=ID&getFineList=TRUE -> JSON Fine IDS (List Fines)
+    // ?auth=ID&fineList=TRUE -> JSON Fine IDS (List Fines)
     // ?auth=ID&createFine=ID&name=NAME&data=BLOB -> SUCCESS/FAIL (Creates Fine)
     // ?auth=ID&deleteFine=ID -> SUCCESS/FAIL (Deletes Fine)
 
@@ -249,21 +249,18 @@
             }
             if (sp1[0] === "auth" && sp2[0] === "fine") {
                 response = "Fine Request";
+                getFine(sp2[1]);
             }
             if (sp1[0] === "auth" && sp2[0] === "fineInfo") {
                 response = "Fine Info Request";
+                getFineInfo(sp1[1], sp2[1]);
             }
             if (sp1[0] === "auth" && sp2[0] === "fineList") {
                 response = "Fine List Request";
-            }
-            if (sp1[0] === "auth" && sp2[0] === "deleteFine") {
-                response = "Fine Delete Request";
+                getUserProperty(sp1[1], sp2[1]);
             }
             if (sp1[0] === "auth" && sp2[0] === "comp") {
                 response = "Comp Request";
-            }
-            if (sp1[0] === "auth" && sp2[0] === "deleteComp") {
-                response = "Delete Comp Request";
             }
         }
 
@@ -272,13 +269,18 @@
             sp2 = split[1].split("=");
             sp3 = split[2].split("=");
 
-            if (sp1[0] === "auth" && sp2[0] === "userProperty" && sp3[0] === "value") {
-                response = "Set User Property Request";
-            }
-
             if (sp1[0] === "createUser" && sp2[0] === "password" && sp3[0] === "email") {
                 response = "Create User Request";
                 createUser(sp1[1], sp2[1], sp3[1]);
+            }
+            if (sp1[0] === "auth" && sp2[0] === "password" && sp3[0] === "deleteFine") {
+                response = "Fine Delete Request";
+                deleteFine(sp1[1], sp2[1], sp3[1])
+            }
+
+            if (sp1[0] === "auth" && sp2[0] === "createFine" && sp3[0] === "name") {
+                response = "Create Fine Request";
+                createFine(sp1[1], sp2[1], sp3[1])
             }
         }
 
@@ -288,12 +290,29 @@
             sp3 = split[2].split("=");
             sp4 = split[3].split("=");
 
-            if (sp1[0] === "auth" && sp2[0] === "createFine" && sp3[0] === "name" && sp4[0] === "data") {
-                response = "Create Fine Request";
-            }
+
 
             if (sp1[0] === "auth" && sp2[0] === "createComp" && sp3[0] === "comp" && sp4[0] === "name") {
-                response = "Create Fine Request";
+                response = "Create Comp Request";
+                createComp(sp1[1], sp3[1], sp4[1], sp2[1])
+            }
+            if (sp1[0] === "auth" && sp1[0] === "password" && sp3[0] === "userProperty" && sp4[0] === "value") {
+                response = "Set Fine Property Request";
+                setUserProperty(sp1[1], sp2[1],sp3[1], sp4[1]);
+            }
+
+        }
+
+        if (split.length === 5) {
+            sp1 = split[0].split("=");
+            sp2 = split[1].split("=");
+            sp3 = split[2].split("=");
+            sp4 = split[3].split("=");
+            sp5 = split[4].split("=");
+
+            if (sp1[0] === "auth" && sp1[0] === "password" && sp3[0] === "fine" && sp4[0] === "fineProperty" && sp5[0] === "value") {
+                response = "Set Fine Property Request";
+                setFineProperty(sp1[1], sp2[1],sp3[1], sp4[1], sp5[1]);
             }
 
         }
@@ -301,6 +320,179 @@
 
         document.getElementById("Battery").innerHTML = response;
 
+
+
+    }
+
+    function sendFine() {
+
+        console.log("SENDING");
+
+        let file = document.querySelector('input[type=file]').files[0];
+
+        console.log(file);
+
+        let fileReader = new FileReader();
+        fileReader.onload = function(e) {
+
+            console.log("LOADED");
+            let content = e.target.result;
+            //console.log(content);
+            //remove the header and leave only the Base64 content itself
+
+            api.setBranch('master')
+                .then(() => api.pushFiles(
+                    'Adding Fine: ' + '(' + file.name + ')',
+                    [
+                        {content: content, path: file.name},
+                    ])
+                )
+                .then(function () {
+                    document.getElementById("Battery").innerHTML = "Uploaded!";
+                });
+
+
+        };
+
+        if (file) {
+            console.log("Reading");
+            fileReader.readAsDataURL(file);
+
+        } else {
+            document.getElementById("Battery").innerHTML = "Didn't work";
+        }
+
+
+
+    }
+
+    function getComp(id) {
+
+        getUserProperty(id, "Fines").then((property) => {
+
+            let split = property.split("*");
+
+            let array = [];
+
+            for (a in split) {
+                let xml = new XMLHttpRequest();
+
+                xml.open('GET',`https://raw.githubusercontent.com/${api.getRepo().__fullname}/master/${a + ".json"}`);
+
+                xml.send();
+
+                xml.onload = function(e) {
+
+                    array[a] = xml.response;
+                };
+            }
+
+            document.getElementById("Battery").innerHTML = JSON.stringify(array);
+
+        });
+
+
+
+
+    }
+
+
+    function getFine(id) {
+        let xml = new XMLHttpRequest();
+
+        xml.open('GET',`https://raw.githubusercontent.com/${api.getRepo().__fullname}/master/${id + ".mp4"}`);
+
+        xml.send();
+
+        xml.onload = function(e) {
+
+            document.getElementById("Battery").innerHTML = xml.response;
+        };
+    }
+
+    function createFine(user, id, name) {
+
+        api.getFile("Default_Fines.json").then((file) => {
+
+            let json = JSON.parse(file);
+
+            json["ID"] = id;
+            json["Name"] = name;
+            json["Author"] = user;
+            json["Created"] = new Date().toJSON();
+
+            api.setBranch('master')
+                .then(() => api.pushFiles(
+                    'Adding Fine: ' + id + ' (' + name + ')',
+                    [
+                        {content: JSON.stringify(json), path: id + '.json'},
+                    ])
+                )
+                .then(function () {
+                    document.getElementById("Battery").innerHTML = "Created File. Uploading Data...";
+                    console.log('Created File. Uploading Data...');
+
+                });
+
+        });
+
+
+    }
+
+    function deleteFine(user, pass, id) {
+        api.getFile(user + ".json").then((file) =>{
+
+            if (file !== null) {
+
+                let json = JSON.parse(file);
+
+                if (json["Password"] === pass) {
+
+                    //Possibly have to remove other things too
+                    api.removeFile('master', id + ".json").then((response) => {
+
+                        document.getElementById("Battery").innerHTML = "Deleted Fine";
+
+                    });
+
+
+                } else {
+                    document.getElementById("Battery").innerHTML = "Incorrect Password";
+                }
+
+
+            } else {
+                document.getElementById("Battery").innerHTML = "User Not Found";
+            }
+
+        });
+    }
+
+    function createComp(user, id, name, fines) {
+
+        api.getFile("Default_Fines.json").then((file) => {
+
+            let json = JSON.parse(file);
+
+            json["ID"] = id;
+            json["Name"] = name;
+            json["Author"] = user;
+            json["Created"] = new Date().toJSON();
+            json["Fines"] = fines;
+
+            api.setBranch('master')
+                .then(() => api.pushFiles(
+                    'Adding Comp: ' + id + ' (' + name + ')',
+                    [
+                        {content: JSON.stringify(json), path: id + '.json'},
+                    ])
+                )
+                .then(function () {
+                    document.getElementById("Battery").innerHTML = "Created Comp.";
+                    console.log('Created Comp.');
+                });
+
+        });
 
 
     }
@@ -359,11 +551,70 @@
         api.getFile(id + ".json").then((file) =>{
 
             if (file !== null) {
+                let json = JSON.parse(file);
+                document.getElementById("Battery").innerHTML = json[prop];
+            } else {
+                document.getElementById("Battery").innerHTML = "User Not Found";
+            }
+
+        });
+    }
+
+    function getFineInfo(fine) {
+        api.getFile(fine + ".json").then((file) =>{
+
+            if (file !== null) {
+
+                let json = JSON.parse(file);
+                document.getElementById("Battery").innerHTML = JSON.stringify(json);
+
+            } else {
+                document.getElementById("Battery").innerHTML = "Fine Not Found";
+            }
+
+        });
+    }
+
+    function setFineProperty(id, pass, fine, prop, value) {
+        api.getFile(id + ".json").then((file) =>{
+
+            if (file !== null) {
 
                 let json = JSON.parse(file);
 
+                if (json["Password"] === pass) {
 
-                    document.getElementById("Battery").innerHTML = json[prop];
+                    api.getFile(fine + ".json").then((fine) => {
+                        let j = JSON.parse(fine);
+
+                        if (j[prop] !== null) {
+
+                            j[prop] = value;
+
+                            api.setBranch('master')
+                                .then(() => api.pushFiles(
+                                    'Changing A property for Fine: ' + fine,
+                                    [
+                                        {content: JSON.stringify(j), path: fine + '.json'},
+                                    ])
+                                )
+                                .then(function () {
+                                    document.getElementById("Battery").innerHTML = "Changed Property";
+                                    console.log('Changed Property!');
+                                });
+
+                        } else {
+                            document.getElementById("Battery").innerHTML = "Invalid Property";
+                        }
+
+                    });
+
+
+                } else {
+                    document.getElementById("Battery").innerHTML = "Invalid Password";
+                }
+
+
 
 
 
@@ -374,21 +625,60 @@
         });
     }
 
+    function setUserProperty(id, pass, prop, value) {
+        api.getFile(id + ".json").then((file) =>{
+
+            if (file !== null) {
+
+                let json = JSON.parse(file);
+
+                if (json["Password"] === pass) {
+
+                    if (json[prop] !== null) {
+
+                        json[prop] = value;
+
+                        api.setBranch('master')
+                            .then(() => api.pushFiles(
+                                'Changing A property for user: ' + id,
+                                [
+                                    {content: JSON.stringify(json), path: id + '.json'},
+                                ])
+                            )
+                            .then(function () {
+                                document.getElementById("Battery").innerHTML = "Changed Property";
+                                console.log('Changed Property!');
+                            });
+
+                    } else {
+                        document.getElementById("Battery").innerHTML = "Invalid Property";
+                    }
+                } else {
+                    document.getElementById("Battery").innerHTML = "Invalid Password";
+                }
+
+
+
+
+
+            } else {
+                document.getElementById("Battery").innerHTML = "User Not Found";
+            }
+
+        });
+    }
 
     function createUser(id, pass, email) {
 
         api.getFile("Default_User.json").then((file) => {
 
-            var json = JSON.parse(file);
+            let json = JSON.parse(file);
 
             json["ID"] = id;
             json["Password"] = pass;
             json["Creation"] = new Date().toJSON();
             json["LastLogin"] = new Date().toJSON();
             json["Email"] = email;
-
-            console.log(json);
-            console.log(JSON.stringify(json));
 
             api.setBranch('master')
                 .then(() => api.pushFiles(
@@ -398,8 +688,8 @@
                     ])
                 )
                 .then(function () {
-                    document.getElementById("Battery").innerHTML = "Files Committed";
-                    console.log('Files committed!');
+                    document.getElementById("Battery").innerHTML = "User Created!";
+                    console.log('User Created!');
                 });
 
         });
