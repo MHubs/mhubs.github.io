@@ -261,6 +261,7 @@
             }
             if (sp1[0] === "auth" && sp2[0] === "comp") {
                 response = "Comp Request";
+                getComp(sp2[1]);
             }
         }
 
@@ -320,6 +321,13 @@
 
         document.getElementById("Battery").innerHTML = response;
 
+        try {
+            webkit.messageHandlers.callbackHandler.postMessage("camera");
+            document.getElementById("Battery").innerHTML = "POSTED"
+        } catch(err) {
+            console.log('The native context does not exist yet');
+            document.getElementById("Battery").innerHTML = "ERROR"
+        }
 
 
     }
@@ -510,6 +518,8 @@
                     api.removeFile('master', id + ".json").then((response) => {
 
                         document.getElementById("Battery").innerHTML = "Deleted User";
+
+
 
                     });
 
