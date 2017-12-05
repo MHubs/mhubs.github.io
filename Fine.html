@@ -245,7 +245,7 @@
             }
             if (sp1[0] === "auth" && sp2[0] === "getUserProperty") {
                 response = "User Property Request";
-                //getUserProperty(sp1[1], sp2[1]);
+                getUserProperty(sp1[1], sp2[1]);
             }
             if (sp1[0] === "auth" && sp2[0] === "fine") {
                 response = "Fine Request";
@@ -321,13 +321,7 @@
 
         document.getElementById("Battery").innerHTML = response;
 
-        try {
-            webkit.messageHandlers.callbackHandler.postMessage("camera");
-            document.getElementById("Battery").innerHTML = "POSTED"
-        } catch(err) {
-            console.log('The native context does not exist yet');
-            document.getElementById("Battery").innerHTML = "ERROR"
-        }
+
 
 
     }
@@ -357,6 +351,13 @@
                 )
                 .then(function () {
                     document.getElementById("Battery").innerHTML = "Uploaded!";
+
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Uploaded!");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
+
                 });
 
 
@@ -397,6 +398,12 @@
 
             document.getElementById("Battery").innerHTML = JSON.stringify(array);
 
+            try {
+                webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(array));
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
+
         });
 
 
@@ -415,6 +422,13 @@
         xml.onload = function(e) {
 
             document.getElementById("Battery").innerHTML = xml.response;
+
+            try {
+                webkit.messageHandlers.callbackHandler.postMessage(xml.response);
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
+
         };
     }
 
@@ -461,16 +475,32 @@
 
                         document.getElementById("Battery").innerHTML = "Deleted Fine";
 
+                        try {
+                            webkit.messageHandlers.callbackHandler.postMessage("Deleted Fine");
+                        } catch(err) {
+                            console.log('The native context does not exist yet');
+                        }
                     });
 
 
                 } else {
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
+
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
                 }
 
 
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -498,6 +528,11 @@
                 .then(function () {
                     document.getElementById("Battery").innerHTML = "Created Comp.";
                     console.log('Created Comp.');
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Created Comp.");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
                 });
 
         });
@@ -519,18 +554,34 @@
 
                         document.getElementById("Battery").innerHTML = "Deleted User";
 
-
+                        try {
+                            webkit.messageHandlers.callbackHandler.postMessage("Deleted User");
+                        } catch(err) {
+                            console.log('The native context does not exist yet');
+                        }
 
                     });
 
 
                 } else {
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
+
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
                 }
 
 
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -545,13 +596,31 @@
 
                if (json["Password"] === pass) {
                    document.getElementById("Battery").innerHTML = JSON.stringify(json)
+
+                   try {
+                       webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(json));
+                   } catch(err) {
+                       console.log('The native context does not exist yet');
+                   }
                } else {
                    document.getElementById("Battery").innerHTML = "Incorrect Password";
+
+                   try {
+                       webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                   } catch(err) {
+                       console.log('The native context does not exist yet');
+                   }
                }
 
 
            } else {
                document.getElementById("Battery").innerHTML = "User Not Found";
+
+               try {
+                   webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+               } catch(err) {
+                   console.log('The native context does not exist yet');
+               }
            }
 
         });
@@ -563,8 +632,21 @@
             if (file !== null) {
                 let json = JSON.parse(file);
                 document.getElementById("Battery").innerHTML = json[prop];
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage(json[prop]);
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
+
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -578,8 +660,20 @@
                 let json = JSON.parse(file);
                 document.getElementById("Battery").innerHTML = JSON.stringify(json);
 
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(json));
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
+
             } else {
                 document.getElementById("Battery").innerHTML = "Fine Not Found";
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("ine Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -611,17 +705,33 @@
                                 .then(function () {
                                     document.getElementById("Battery").innerHTML = "Changed Property";
                                     console.log('Changed Property!');
+                                    try {
+                                        webkit.messageHandlers.callbackHandler.postMessage("Changed Property");
+                                    } catch(err) {
+                                        console.log('The native context does not exist yet');
+                                    }
                                 });
 
                         } else {
                             document.getElementById("Battery").innerHTML = "Invalid Property";
+
+                            try {
+                                webkit.messageHandlers.callbackHandler.postMessage("Invalid Property");
+                            } catch(err) {
+                                console.log('The native context does not exist yet');
+                            }
                         }
 
                     });
 
 
                 } else {
-                    document.getElementById("Battery").innerHTML = "Invalid Password";
+                    document.getElementById("Battery").innerHTML = "Incorrect Password";
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
                 }
 
 
@@ -630,6 +740,12 @@
 
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -658,13 +774,32 @@
                             .then(function () {
                                 document.getElementById("Battery").innerHTML = "Changed Property";
                                 console.log('Changed Property!');
+
+                                try {
+                                    webkit.messageHandlers.callbackHandler.postMessage("Changed Property");
+                                } catch(err) {
+                                    console.log('The native context does not exist yet');
+                                }
                             });
 
                     } else {
                         document.getElementById("Battery").innerHTML = "Invalid Property";
+
+                        try {
+                            webkit.messageHandlers.callbackHandler.postMessage("Invalid Property");
+                        } catch(err) {
+                            console.log('The native context does not exist yet');
+                        }
+
                     }
                 } else {
-                    document.getElementById("Battery").innerHTML = "Invalid Password";
+                    document.getElementById("Battery").innerHTML = "Incorrect Password";
+
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
                 }
 
 
@@ -673,6 +808,12 @@
 
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
+
+                try {
+                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                } catch(err) {
+                    console.log('The native context does not exist yet');
+                }
             }
 
         });
@@ -700,6 +841,13 @@
                 .then(function () {
                     document.getElementById("Battery").innerHTML = "User Created!";
                     console.log('User Created!');
+
+                    try {
+                        webkit.messageHandlers.callbackHandler.postMessage("User Created");
+                    } catch(err) {
+                        console.log('The native context does not exist yet');
+                    }
+
                 });
 
         });
