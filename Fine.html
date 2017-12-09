@@ -353,7 +353,7 @@
                     document.getElementById("Battery").innerHTML = "Uploaded!";
 
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Uploaded!");
+                        webkit.messageHandlers.SendFine.postMessage("Uploaded!");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -369,6 +369,11 @@
 
         } else {
             document.getElementById("Battery").innerHTML = "Didn't work";
+            try {
+                webkit.messageHandlers.SendFineError.postMessage("Uploaded!");
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
         }
 
 
@@ -399,11 +404,17 @@
             document.getElementById("Battery").innerHTML = JSON.stringify(array);
 
             try {
-                webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(array));
+                webkit.messageHandlers.GetComp.postMessage(JSON.stringify(array));
             } catch(err) {
                 console.log('The native context does not exist yet');
             }
 
+        }).catch(() => {
+            try {
+                webkit.messageHandlers.GetCompError.postMessage("Invalid Fine");
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
         });
 
 
@@ -424,12 +435,20 @@
             document.getElementById("Battery").innerHTML = xml.response;
 
             try {
-                webkit.messageHandlers.callbackHandler.postMessage(xml.response);
+                webkit.messageHandlers.GetFine.postMessage(xml.response);
             } catch(err) {
                 console.log('The native context does not exist yet');
             }
 
         };
+
+        xml.onerror = function(e) {
+            try {
+                webkit.messageHandlers.GetFineError.postMessage("Invalid Fine");
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
+        }
     }
 
     function createFine(user, id, name) {
@@ -476,7 +495,7 @@
                         document.getElementById("Battery").innerHTML = "Deleted Fine";
 
                         try {
-                            webkit.messageHandlers.callbackHandler.postMessage("Deleted Fine");
+                            webkit.messageHandlers.DeleteFine.postMessage("Deleted Fine");
                         } catch(err) {
                             console.log('The native context does not exist yet');
                         }
@@ -487,7 +506,7 @@
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
 
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                        webkit.messageHandlers.DeleteFineError.postMessage("Incorrect Password");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -497,10 +516,18 @@
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                    webkit.messageHandlers.DeleteFineError.postMessage("User Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
+            }
+
+        }).catch(() => {
+
+            try {
+                webkit.messageHandlers.DeleteFineError.postMessage("Fine Not Found");
+            } catch(err) {
+                console.log('The native context does not exist yet');
             }
 
         });
@@ -529,7 +556,7 @@
                     document.getElementById("Battery").innerHTML = "Created Comp.";
                     console.log('Created Comp.');
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Created Comp.");
+                        webkit.messageHandlers.CreateComp.postMessage("Created Comp.");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -555,7 +582,7 @@
                         document.getElementById("Battery").innerHTML = "Deleted User";
 
                         try {
-                            webkit.messageHandlers.callbackHandler.postMessage("Deleted User");
+                            webkit.messageHandlers.DeleteUser.postMessage("Deleted User");
                         } catch(err) {
                             console.log('The native context does not exist yet');
                         }
@@ -567,7 +594,7 @@
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
 
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                        webkit.messageHandlers.DeleteUserError.postMessage("Incorrect Password");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -578,7 +605,7 @@
                 document.getElementById("Battery").innerHTML = "User Not Found";
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                    webkit.messageHandlers.DeleteUserError.postMessage("User Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
@@ -598,7 +625,7 @@
                    document.getElementById("Battery").innerHTML = JSON.stringify(json)
 
                    try {
-                       webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(json));
+                       webkit.messageHandlers.Auth.postMessage(JSON.stringify(json));
                    } catch(err) {
                        console.log('The native context does not exist yet');
                    }
@@ -606,7 +633,7 @@
                    document.getElementById("Battery").innerHTML = "Incorrect Password";
 
                    try {
-                       webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                       webkit.messageHandlers.AuthError.postMessage("Incorrect Password");
                    } catch(err) {
                        console.log('The native context does not exist yet');
                    }
@@ -617,7 +644,7 @@
                document.getElementById("Battery").innerHTML = "User Not Found";
 
                try {
-                   webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                   webkit.messageHandlers.AuthError.postMessage("User Not Found");
                } catch(err) {
                    console.log('The native context does not exist yet');
                }
@@ -631,19 +658,30 @@
 
             if (file !== null) {
                 let json = JSON.parse(file);
-                document.getElementById("Battery").innerHTML = json[prop];
 
-                try {
-                    webkit.messageHandlers.callbackHandler.postMessage(json[prop]);
-                } catch(err) {
-                    console.log('The native context does not exist yet');
+                if (json[prop] !== null) {
+
+                    document.getElementById("Battery").innerHTML = json[prop];
+
+                    try {
+                        webkit.messageHandlers.UserProperty.postMessage(json[prop]);
+                    } catch (err) {
+                        console.log('The native context does not exist yet');
+                    }
+                } else {
+                    document.getElementById("Battery").innerHTML = "Invalid Property";
+
+                    try {
+                        webkit.messageHandlers.UserPropertyError.postMessage("Invalid Property");
+                    } catch (err) {
+                        console.log('The native context does not exist yet');
+                    }
                 }
-
             } else {
                 document.getElementById("Battery").innerHTML = "User Not Found";
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                    webkit.messageHandlers.UserPropertyError.postMessage("User Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
@@ -661,7 +699,7 @@
                 document.getElementById("Battery").innerHTML = JSON.stringify(json);
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage(JSON.stringify(json));
+                    webkit.messageHandlers.FineInfo.postMessage(JSON.stringify(json));
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
@@ -670,12 +708,18 @@
                 document.getElementById("Battery").innerHTML = "Fine Not Found";
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("ine Not Found");
+                    webkit.messageHandlers.FineInfoError.postMessage("Fine Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
             }
 
+        }).catch(() => {
+            try {
+                webkit.messageHandlers.FineInfoError.postMessage("Fine Not Found");
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
         });
     }
 
@@ -706,7 +750,7 @@
                                     document.getElementById("Battery").innerHTML = "Changed Property";
                                     console.log('Changed Property!');
                                     try {
-                                        webkit.messageHandlers.callbackHandler.postMessage("Changed Property");
+                                        webkit.messageHandlers.SetFineProperty.postMessage("Changed Property");
                                     } catch(err) {
                                         console.log('The native context does not exist yet');
                                     }
@@ -716,7 +760,7 @@
                             document.getElementById("Battery").innerHTML = "Invalid Property";
 
                             try {
-                                webkit.messageHandlers.callbackHandler.postMessage("Invalid Property");
+                                webkit.messageHandlers.SetFinePropertyError.postMessage("Invalid Property");
                             } catch(err) {
                                 console.log('The native context does not exist yet');
                             }
@@ -728,7 +772,7 @@
                 } else {
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                        webkit.messageHandlers.SetFinePropertyError.postMessage("Incorrect Password");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -742,12 +786,18 @@
                 document.getElementById("Battery").innerHTML = "User Not Found";
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                    webkit.messageHandlers.SetFinePropertyError.postMessage("User Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
             }
 
+        }).catch(() => {
+            try {
+                webkit.messageHandlers.SetFinePropertyError.postMessage("Fine Not Found");
+            } catch(err) {
+                console.log('The native context does not exist yet');
+            }
         });
     }
 
@@ -776,7 +826,7 @@
                                 console.log('Changed Property!');
 
                                 try {
-                                    webkit.messageHandlers.callbackHandler.postMessage("Changed Property");
+                                    webkit.messageHandlers.SetUserProperty.postMessage("Changed Property");
                                 } catch(err) {
                                     console.log('The native context does not exist yet');
                                 }
@@ -786,7 +836,7 @@
                         document.getElementById("Battery").innerHTML = "Invalid Property";
 
                         try {
-                            webkit.messageHandlers.callbackHandler.postMessage("Invalid Property");
+                            webkit.messageHandlers.SetUserPropertyError.postMessage("Invalid Property");
                         } catch(err) {
                             console.log('The native context does not exist yet');
                         }
@@ -796,7 +846,7 @@
                     document.getElementById("Battery").innerHTML = "Incorrect Password";
 
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("Incorrect Password");
+                        webkit.messageHandlers.SetUserPropertyError.postMessage("Incorrect Password");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
@@ -810,7 +860,7 @@
                 document.getElementById("Battery").innerHTML = "User Not Found";
 
                 try {
-                    webkit.messageHandlers.callbackHandler.postMessage("User Not Found");
+                    webkit.messageHandlers.SetUserPropertyError.postMessage("User Not Found");
                 } catch(err) {
                     console.log('The native context does not exist yet');
                 }
@@ -843,7 +893,7 @@
                     console.log('User Created!');
 
                     try {
-                        webkit.messageHandlers.callbackHandler.postMessage("User Created");
+                        webkit.messageHandlers.CreateUser.postMessage("User Created");
                     } catch(err) {
                         console.log('The native context does not exist yet');
                     }
