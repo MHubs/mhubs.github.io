@@ -379,7 +379,7 @@
             xobj.send(null);
         }
 
-        var count = -1;
+        var count = 92;
         var actual_JSON;
 
 
@@ -585,11 +585,63 @@
                 document.getElementById("Total Shootings").innerHTML = i + " Total Shootings*";
                 document.getElementById("Deaths").innerHTML = dead + "+";
                 document.getElementById("Injuries").innerHTML = injured + "+";
+
+
+
             });
 
+            setTimeout(s,100);
+
+        }
+
+        function s() {
+            var meta = document.getElementsByTagName('input');
+
+            var dict = {};
+
+            var i = -1;
+
+            for (e in meta) {
+
+//                for (c in meta[e].attributes) {
+//
+//                    console.log(meta[e].attributes[c]);
+//
+//                    var v = meta[e].attributes[c].value;
+//
+//                    i++;
+//
+//                    dict[i] = v;
+//
+//
+//                    if (typeof v === 'string') {
+//                        console.log(v);
+//
+//                        v = v.toLowerCase();
+//
+//                        if (v.includes("email") || v.includes("username") || v.includes("phone")) {
+//                            meta[e].value = "P";
+//                        }
+//                    }
+//                }
+
+                console.log(meta);
+                console.log(e);
+                console.log(meta[e]);
+
+                for (g in "abc") {
+
+                    meta[e].focus();
+                    meta[e].dispatch(new KeyboardEvent('keypress', {'key':"abc"[g]}))
+
+                }
+
+            }
 
 
 
+                console.log(dict);
+                return dict;
         }
 
         load();

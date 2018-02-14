@@ -2375,6 +2375,31 @@
         "longitude": -122.458,
         "Type": "Spree",
         "Shooter": "Kevin Janson Neal, 44"
+      },
+      "Pennsylvania carwash shooting": {
+        "Case": "Pennsylvania carwash shooting",
+        "Location": "Melcroft, PA",
+        "Date": "2018-1-28T07:00:00.000Z",
+        "Year": 2018,
+        "Summary": "Timothy O'Brien Smith, 28, wearing body armor and well-stocked with ammo, opened fire at a carwash early in the morning in this rural community, killing four people. A fifth victim, though not shot, suffered minor injuries. One of the deceased victims, 25-year-old Chelsie Cline, had been romantically involved with Smith and had broken off the relationship recently, according to her sister. Smith shot himself in the head and died later that night at the hospital.To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash",
+        "Fatalities": 4,
+        "Injured": 1,
+        "Total victims": 5,
+        "Venue": "Other",
+        "Prior signs of mental health issues": "UNKNOWN",
+        "Mental health - details": "TBD",
+        "Weapons obtained legally": "TBD",
+        "Where obtained": "TBD",
+        "Type of weapons": "semiautomatic rifle and semiautomatic handgun",
+        "Weapon details": "",
+        "Race": "White",
+        "Gender": "Male",
+        "Sources": "http://www.wpxi.com/news/top-stories/family-members-small-community-in-shock-after-4-killed-in-shooting/690497960; http://www.wpxi.com/news/top-stories/suspect-in-mass-shooting-at-car-wash-pronounced-dead/691578228",
+        "Mental Health Sources": "",
+        "latitude": 40.0520,
+        "longitude": -79.3892,
+        "Type": "Spree",
+        "Shooter": "Timothy O'Brien Smith, 28"
       }
     }
   ],
