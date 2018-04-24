@@ -2475,6 +2475,31 @@
         "longitude": -76.4968,
         "Type": "Mass",
         "Shooter": "Austin Rollins, 17"
+      },
+      "Waffle House shooting": {
+        "Case": "Waffle House shooting",
+        "Location": "Nashville, TN",
+        "Date": "2018-4-22T07:00:00.000Z",
+        "Year": 2018,
+        "Summary": "Travis Reinking, 29, opened fire around 3:30 a.m. in the parking lot of a Waffle House in Antioch, and continued shooting as he entered the restaurant. As he attempted to reload his AR-15, a bystander heroically wrestled the rifle away from Reinking, who then fled; he was captured by authorities the following day. Reinking had a history of erratic behavior and run-ins with law enforcement in his home state of Illinois, including claims that he was being stalked and harassed by pop star Taylor Swift. In July 2017, he was arrested at the White House after breaching security in an effort to speak with President Trump, reportedly claiming his right to do so as “a sovereign citizen.”",
+        "Fatalities": 4,
+        "Injured": 4,
+        "Total victims": 8,
+        "Venue": "Restaurant",
+        "Prior signs of mental health issues": "Yes",
+        "Mental health - details": "Reinking had a history of erratic behavior and run-ins with law enforcement in his home state of Illinois, including claims that he was being stalked and harassed by pop star Taylor Swift. In July 2017, he was arrested at the White House after breaching security in an effort to speak with President Trump, reportedly claiming his right to do so as “a sovereign citizen.”",
+        "Weapons obtained legally": "TBD",
+        "Where obtained": "Family Member",
+        "Type of weapons": "semiautomatic rifle",
+        "Weapon details": "AR-15",
+        "Race": "White",
+        "Gender": "Male",
+        "Sources": "https://www.washingtonpost.com/news/post-nation/wp/2018/04/23/waffle-house-shooting-travis-reinking-manhunt-continues-nashville-police-say/?utm_term=.69579db5fdc6; https://www.tennessean.com/story/news/2018/04/23/waffle-house-shooting-travis-reinking-search-continues-antioch-nashville/541313002/; https://www.nytimes.com/2018/04/23/us/waffle-house-shooting-nashville.html; https://www.buzzfeed.com/briannasacks/this-is-what-we-know-about-the-suspected-waffle-house-gunman?utm_term=.ilj2Knad6#.lklzyb3vj; http://www.wkrn.com/news/manhunt-continues-for-gunman-who-killed-4-at-antioch-waffle-house/1134986998",
+        "Mental Health Sources": "https://www.buzzfeed.com/briannasacks/this-is-what-we-know-about-the-suspected-waffle-house-gunman?utm_term=.ilj2Knad6#.lklzyb3vj",
+        "latitude": 36.052521,
+        "longitude": -86.616944,
+        "Type": "Mass",
+        "Shooter": "Travis Reinking, 29"
       }
     }
   ],
