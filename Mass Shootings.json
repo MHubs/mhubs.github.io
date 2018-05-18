@@ -2500,6 +2500,31 @@
         "longitude": -86.616944,
         "Type": "Mass",
         "Shooter": "Travis Reinking, 29"
+      },
+      "Santa Fe High School Shooting": {
+        "Case": "Santa Fe High School Shooting",
+        "Location": "Santa Fe, TX",
+        "Date": "2018-5-18T07:00:00.000Z",
+        "Year": 2018,
+        "Summary": "DETAILS PENDING",
+        "Fatalities": 8,
+        "Injured": 12,
+        "Total victims": 20,
+        "Venue": "School",
+        "Prior signs of mental health issues": "TBD",
+        "Mental health - details": "TBD",
+        "Weapons obtained legally": "TBD",
+        "Where obtained": "TBD",
+        "Type of weapons": "TBD",
+        "Weapon details": "TBD",
+        "Race": "TBD",
+        "Gender": "Male",
+        "Sources": "https://www.cnn.com/2018/05/18/us/texas-school-shooting/index.html",
+        "Mental Health Sources": "",
+        "latitude": 29.392825,
+        "longitude": -95.141972,
+        "Type": "Mass",
+        "Shooter": "DETAILS PENDING"
       }
     }
   ],
