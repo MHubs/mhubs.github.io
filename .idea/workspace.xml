@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="493" column="59" lean-forward="true" selection-start-line="493" selection-start-column="59" selection-end-line="493" selection-end-column="59" />
+            <state relative-caret-position="410">
+              <caret line="521" column="61" lean-forward="true" selection-start-line="521" selection-start-column="61" selection-end-line="521" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -67,6 +67,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -95,7 +101,9 @@
       <workItem from="1559130905625" duration="388000" />
       <workItem from="1559444734148" duration="165000" />
       <workItem from="1559697498726" duration="368000" />
-      <workItem from="1561375902179" duration="297000" />
+      <workItem from="1561375902179" duration="764000" />
+      <workItem from="1563229504797" duration="125000" />
+      <workItem from="1563229812749" duration="571000" />
     </task>
     <task id="LOCAL-00001" summary="DOTD">
       <created>1558489798125</created>
@@ -115,10 +123,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1629000" />
+    <option name="totallyTimeSpent" value="2792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="795" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -185,8 +194,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="493" column="59" lean-forward="true" selection-start-line="493" selection-start-column="59" selection-end-line="493" selection-end-column="59" />
+        <state relative-caret-position="410">
+          <caret line="521" column="61" lean-forward="true" selection-start-line="521" selection-start-column="61" selection-end-line="521" selection-end-column="61" />
         </state>
       </provider>
     </entry>
