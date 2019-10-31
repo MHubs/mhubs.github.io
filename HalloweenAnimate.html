@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<p id="Test">Test</p>
+
+<script>
+    var count = 0;
+
+    var skeleton=[["000000","0000ff","0000ff","0000ff","000000"],
+        ["0000ff","000000","000000","000000","0000ff"],
+        ["0000ff","ff0000","000000","ff0000","0000ff"],
+        ["0000ff","000000","000000","000000","0000ff"],
+        ["000000","0000ff","000000","0000ff","000000"],
+        ["000000","0000ff","000000","0000ff","000000"],
+        ["000000","0000ff","0000ff","0000ff","000000"]];
+
+    var pumpkin=[["000000","008000","000000","000000","000000"],
+        ["000000","000000","008000","000000","000000"],
+        ["000000","802000","802000","802000","000000"],
+        ["802000","000000","000000","000000","802000"],
+        ["802000","000000","000000","000000","802000"],
+        ["802000","000000","000000","000000","802000"],
+        ["000000","802000","802000","802000","000000"]];
+
+    var pixels = pumpkin;
+
+    var back = false;
+    var back2 = false;
+
+    var moveInterval;
+    var fadeInterval;
+
+    var brightness=100;
+    var increment=10;
+
+    var type = 0;
+
+
+    function fade() {
+        send_brightness(brightness);
+        if(brightness>=100) {increment=-10};
+        if(brightness==0) {
+
+            increment=10;
+
+            if (type == 0) {
+
+                pixels = skeleton;
+                sendPixels();
+                type = 1;
+            } else {
+
+                pixels = pumpkin;
+                sendPixels();
+                type = 0;
+
+            }
+
+
+
+        }
+        brightness += increment;
+
+        if (brightness >= 100) {
+            clearInterval(fadeInterval);
+            moveInterval = setInterval(scrollPixels,200);
+        }
+
+    }
+
+    function scrollPixels() {
+
+        var p = "";
+
+        if (!back2) {
+
+            for (r = 0; r < 7; r++) {
+                for (c = 0; c < 5; c++) {
+
+                    if (!back) {
+
+                        if (r >= 6 - count) {
+                            p = p + pixels[r][c];
+                        } else {
+                            p = p + "000000"
+                        }
+                    } else {
+
+                        if (r <= 6 - count) {
+                            p = p + pixels[r][c];
+                        } else {
+                            p = p + "000000"
+                        }
+
+                    }
+                }
+            }
+
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.open('GET', 'http://192.168.4.1/cc?brightness=' + brightness + '&pixels=' + p);
+            xhr.send();
+
+            count++;
+
+            if (count == 8) {
+                count = 0;
+                back = !back;
+                if (!back) {
+                    back2 = true;
+                }
+            }
+        } else {
+
+            for (r = 0; r < 7; r++) {
+                for (c = 0; c < 5; c++) {
+
+                    if (!back) {
+
+                        if (r <= count) {
+                            p = p + pixels[r][c];
+                        } else {
+                            p = p + "000000"
+                        }
+                    } else {
+
+                        if (r >= count) {
+                            p = p + pixels[r][c];
+                        } else {
+                            p = p + "000000"
+                        }
+
+                    }
+                }
+            }
+
+            var xhr = new XMLHttpRequest();
+
+            document.getElementById("Test").innerHTML = "BRIGHTNESS: " + brightness + " | COUNT: " + count ;
+
+            xhr.open('GET', 'http://192.168.4.1/cc?brightness=' + brightness + '&pixels=' + p);
+
+            xhr.send();
+
+            count++;
+
+            if (count == 8) {
+                count = 0;
+                back = !back
+
+                if (back) {
+                    fadeInterval = setInterval(fade, 50);
+                    clearInterval(moveInterval);
+                } else {
+                    back2 = false;
+                }
+
+            }
+
+        }
+    }
+    moveInterval = setInterval(scrollPixels,200);
+
+    function send_brightness(brightness) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','http://192.168.4.1/cc?brightness='+brightness,true);
+        xhr.send();
+    }
+
+    function sendPixels() {
+
+        var p = "";
+
+        for (r = 0; r < 7; r++) {
+            for (c = 0; c < 5; c++) {
+                p = p + pixels[r][c];
+            }
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','http://192.168.4.1/cc?pixels='+p);
+        xhr.send();
+    }
+
+
+</script>
