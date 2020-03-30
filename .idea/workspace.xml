@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/dotd/5282018.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dotd/6272019.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dotd/632018.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="802" column="8" lean-forward="true" selection-start-line="802" selection-start-column="8" selection-end-line="802" selection-end-column="8" />
+            <state relative-caret-position="152">
+              <caret line="798" column="43" lean-forward="true" selection-start-line="798" selection-start-column="43" selection-end-line="798" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -38,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="987">
               <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
             </state>
           </provider>
@@ -67,7 +66,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="806" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -166,7 +165,9 @@
       <workItem from="1581971702968" duration="735000" />
       <workItem from="1581977355791" duration="8000" />
       <workItem from="1582227670365" duration="22000" />
-      <workItem from="1584109378622" duration="259000" />
+      <workItem from="1584109378622" duration="677000" />
+      <workItem from="1584398363524" duration="381000" />
+      <workItem from="1585606521253" duration="227000" />
     </task>
     <task id="LOCAL-00001" summary="DOTD">
       <created>1558489798125</created>
@@ -322,14 +323,22 @@
       <option name="project" value="LOCAL" />
       <updated>1581782608394</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="DOTD">
+      <created>1584109755013</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1584109755013</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21142000" />
+    <option name="totallyTimeSpent" value="21941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="806" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="803" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -362,36 +371,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dotd/2142020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2152020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2162020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2172020.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2182020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2192020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2202020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2222020.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2232020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/2242020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/2252020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -453,13 +432,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dotd/2212020.png" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/3152020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -511,13 +483,48 @@
     <entry file="file://$PROJECT_DIR$/dotd/3282020.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/3282020.jpeg">
+    <entry file="file://$PROJECT_DIR$/dotd/3282020.jpeg" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4012020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4022020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4032020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4052020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4042020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4062020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4072020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4082020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4092020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/4112020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="802" column="8" lean-forward="true" selection-start-line="802" selection-start-column="8" selection-end-line="802" selection-end-column="8" />
+        <state relative-caret-position="152">
+          <caret line="798" column="43" lean-forward="true" selection-start-line="798" selection-start-column="43" selection-end-line="798" selection-end-column="43" />
         </state>
       </provider>
     </entry>
