@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dotd/10282019.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dotd/10292019.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dotd/11052019.jpeg" beforeDir="false" />
@@ -26,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="962" column="7" lean-forward="true" selection-start-line="962" selection-start-column="7" selection-end-line="962" selection-end-column="7" />
+            <state relative-caret-position="276">
+              <caret line="968" column="58" lean-forward="true" selection-start-line="968" selection-start-column="58" selection-end-line="968" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -61,7 +63,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
@@ -189,6 +191,8 @@
       <workItem from="1595941250673" duration="212000" />
       <workItem from="1596377641965" duration="538000" />
       <workItem from="1597340588501" duration="172000" />
+      <workItem from="1598101553525" duration="339000" />
+      <workItem from="1598274036114" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="DOTD">
       <created>1558489798125</created>
@@ -463,14 +467,22 @@
       <option name="project" value="LOCAL" />
       <updated>1597340722725</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="DOTD">
+      <created>1598101699871</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1598101699871</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29483000" />
+    <option name="totallyTimeSpent" value="30267000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+    <frame x="1" y="23" width="1440" height="801" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -503,15 +515,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dotd/6232020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/6242020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/6252020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/6262020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -629,13 +632,6 @@
     <entry file="file://$PROJECT_DIR$/dotd/8032020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/8152020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -657,10 +653,26 @@
     <entry file="file://$PROJECT_DIR$/dotd/8212020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/8222020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/8232020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/8242020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="962" column="7" lean-forward="true" selection-start-line="962" selection-start-column="7" selection-end-line="962" selection-end-column="7" />
+        <state relative-caret-position="276">
+          <caret line="968" column="58" lean-forward="true" selection-start-line="968" selection-start-column="58" selection-end-line="968" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
         </state>
       </provider>
     </entry>
