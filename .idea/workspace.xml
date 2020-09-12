@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/10282019.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/10292019.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/11052019.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/3162019.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/5192018.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/5222018.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/5282018.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/6272019.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/632018.JPG" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="968" column="58" lean-forward="true" selection-start-line="968" selection-start-column="58" selection-end-line="968" selection-end-column="58" />
+            <state relative-caret-position="63">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -74,6 +65,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -90,7 +82,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +183,8 @@
       <workItem from="1596377641965" duration="538000" />
       <workItem from="1597340588501" duration="172000" />
       <workItem from="1598101553525" duration="339000" />
-      <workItem from="1598274036114" duration="445000" />
+      <workItem from="1598274036114" duration="686000" />
+      <workItem from="1599921254916" duration="210000" />
     </task>
     <task id="LOCAL-00001" summary="DOTD">
       <created>1558489798125</created>
@@ -474,14 +466,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598101699871</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="DOTD">
+      <created>1598274727708</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1598274727708</updated>
+    </task>
+    <task id="LOCAL-00042" summary="DOTD">
+      <created>1598274882536</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1598274882536</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30267000" />
+    <option name="totallyTimeSpent" value="30718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1440" height="801" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
@@ -664,8 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="968" column="58" lean-forward="true" selection-start-line="968" selection-start-column="58" selection-end-line="968" selection-end-column="58" />
+        <state relative-caret-position="63">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
