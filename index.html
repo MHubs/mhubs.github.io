@@ -2,318 +2,318 @@
 <html lang="en">
 
   <head>
+    <meta http-equiv="refresh" content="0; URL=https://mhubs.github.io/personal-website/" />
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="">-->
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!--    <title>Maxwell Hubbard</title>-->
 
-    <title>Maxwell Hubbard</title>
+<!--    &lt;!&ndash; Bootstrap Core CSS &ndash;&gt;-->
+<!--    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--    &lt;!&ndash; Custom Fonts &ndash;&gt;-->
+<!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">-->
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<!--    &lt;!&ndash; Custom CSS &ndash;&gt;-->
+<!--    <link href="css/stylish-portfolio.css" rel="stylesheet">-->
 
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+<!--    <style>-->
+<!--      h1 { color: #FFFFFF; }-->
+<!--      h3 { color: #FFFFFF; }-->
+<!--    </style>-->
 
-    <style>
-      h1 { color: #FFFFFF; }
-      h3 { color: #FFFFFF; }
-    </style>
+<!--    <script>-->
 
-    <script>
+<!--      function Point(x, y) {-->
+<!--        this.x = x;-->
+<!--        this.y = y;-->
+<!--      }-->
 
-      function Point(x, y) {
-        this.x = x;
-        this.y = y;
-      }
+<!--      function quadraticBezierLength(p0x,p0y, p1x,p1y, p2x,p2y) {-->
+<!--        var a = new Point(-->
+<!--                p0x - 2 * p1x + p2x,-->
+<!--                p0y - 2 * p1y + p2y-->
+<!--        );-->
+<!--        var b = new Point(-->
+<!--                2 * p1x - 2 * p0x,-->
+<!--                2 * p1y - 2 * p0y-->
+<!--        );-->
+<!--        var A = 4 * (a.x * a.x + a.y * a.y);-->
+<!--        var B = 4 * (a.x * b.x + a.y * b.y);-->
+<!--        var C = b.x * b.x + b.y * b.y;-->
 
-      function quadraticBezierLength(p0x,p0y, p1x,p1y, p2x,p2y) {
-        var a = new Point(
-                p0x - 2 * p1x + p2x,
-                p0y - 2 * p1y + p2y
-        );
-        var b = new Point(
-                2 * p1x - 2 * p0x,
-                2 * p1y - 2 * p0y
-        );
-        var A = 4 * (a.x * a.x + a.y * a.y);
-        var B = 4 * (a.x * b.x + a.y * b.y);
-        var C = b.x * b.x + b.y * b.y;
+<!--        var Sabc = 2 * Math.sqrt(A+B+C);-->
+<!--        var A_2 = Math.sqrt(A);-->
+<!--        var A_32 = 2 * A * A_2;-->
+<!--        var C_2 = 2 * Math.sqrt(C);-->
+<!--        var BA = B / A_2;-->
 
-        var Sabc = 2 * Math.sqrt(A+B+C);
-        var A_2 = Math.sqrt(A);
-        var A_32 = 2 * A * A_2;
-        var C_2 = 2 * Math.sqrt(C);
-        var BA = B / A_2;
+<!--        return (A_32 * Sabc + A_2 * B * (Sabc - C_2) + (4 * C * A - B * B) * Math.log((2 * A_2 + BA + Sabc) / (BA + C_2))) / (4 * A_32);-->
+<!--      }-->
 
-        return (A_32 * Sabc + A_2 * B * (Sabc - C_2) + (4 * C * A - B * B) * Math.log((2 * A_2 + BA + Sabc) / (BA + C_2))) / (4 * A_32);
-      }
+<!--      console.log(quadraticBezierLength(0,0,1,1,2,0));-->
 
-      console.log(quadraticBezierLength(0,0,1,1,2,0));
-
-    </script>
+<!--    </script>-->
 
   </head>
 
   <body>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
-      <i class="fa fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
-          <i class="fa fa-times"></i>
-        </a>
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#top">Maxwell Hubbard</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#top">Home</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li>
-          <a class="js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-          <li>
-              <a class="js-scroll-trigger" href="#portfolio">Projects</a>
-          </li>
-        <li>
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+<!--    &lt;!&ndash; Navigation &ndash;&gt;-->
+<!--    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">-->
+<!--      <i class="fa fa-bars"></i>-->
+<!--    </a>-->
+<!--    <nav id="sidebar-wrapper">-->
+<!--      <ul class="sidebar-nav">-->
+<!--        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">-->
+<!--          <i class="fa fa-times"></i>-->
+<!--        </a>-->
+<!--        <li class="sidebar-brand">-->
+<!--          <a class="js-scroll-trigger" href="#top">Maxwell Hubbard</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="js-scroll-trigger" href="#top">Home</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="js-scroll-trigger" href="#about">About</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="js-scroll-trigger" href="#skills">Skills</a>-->
+<!--        </li>-->
+<!--          <li>-->
+<!--              <a class="js-scroll-trigger" href="#portfolio">Projects</a>-->
+<!--          </li>-->
+<!--        <li>-->
+<!--          <a class="js-scroll-trigger" href="#contact">Contact</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </nav>-->
 
-    <!-- Header -->
-    <header class="header" id="top">
-      <div class="text-vertical-center">
-        <h1 data-color="white">Maxwell Hubbard</h1>
-        <h3>Software Engineer</h3>
-        <br>
-        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">About me</a>
-      </div>
-    </header>
+<!--    &lt;!&ndash; Header &ndash;&gt;-->
+<!--    <header class="header" id="top">-->
+<!--      <div class="text-vertical-center">-->
+<!--        <h1 data-color="white">Maxwell Hubbard</h1>-->
+<!--        <h3>Software Engineer</h3>-->
+<!--        <br>-->
+<!--        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">About me</a>-->
+<!--      </div>-->
+<!--    </header>-->
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="container text-center">
-        <h1>Hello! I'm Max.</h1>
-          <h2>I'm a detail oriented software engineer who's passionate about providing an easy, fun, and unique experience for people.</h2>
-          <hr class="small">
-          <p class="lead"><b>I am currently a senior at the University of Massachusetts</b> in Amherst studying computer science.
-              I have experience creating applications used in clinical research at a Boston hospital
-              that aim to help aid in the health and wellness of patients with ALS (Amyotrophic Lateral Sclerosis) commonly known as Lou Gehrig's disease.
-          Keeping this in mind, I strive to create applications that not just researchers will use but that the patients themselves will use.</p>
-          <br>
-          <p class="lead"> Through my education, I am continuing to learn new languages, frameworks, and techniques that will help me create elegant, efficient, clean code.
-              I'm always looking for a new project that can help people in need, whether it be a simple app or a way to keep track of their dietary needs.
-          My goal for every project is to create something that is not only functional but beautiful as well.</p>
-          <br>
-          <p class="lead"><b>When I'm not at my desk,</b> I'm probably out playing baseball, umpiring Little League games,
-              playing my saxophone in the local band, or up on stage talking and performing.</p>
-      </div>
-      <!-- /.container -->
-    </section>
+<!--    &lt;!&ndash; About &ndash;&gt;-->
+<!--    <section id="about" class="about">-->
+<!--      <div class="container text-center">-->
+<!--        <h1>Hello! I'm Max.</h1>-->
+<!--          <h2>I'm a detail oriented software engineer who's passionate about providing an easy, fun, and unique experience for people.</h2>-->
+<!--          <hr class="small">-->
+<!--          <p class="lead"><b>I am currently a senior at the University of Massachusetts</b> in Amherst studying computer science.-->
+<!--              I have experience creating applications used in clinical research at a Boston hospital-->
+<!--              that aim to help aid in the health and wellness of patients with ALS (Amyotrophic Lateral Sclerosis) commonly known as Lou Gehrig's disease.-->
+<!--          Keeping this in mind, I strive to create applications that not just researchers will use but that the patients themselves will use.</p>-->
+<!--          <br>-->
+<!--          <p class="lead"> Through my education, I am continuing to learn new languages, frameworks, and techniques that will help me create elegant, efficient, clean code.-->
+<!--              I'm always looking for a new project that can help people in need, whether it be a simple app or a way to keep track of their dietary needs.-->
+<!--          My goal for every project is to create something that is not only functional but beautiful as well.</p>-->
+<!--          <br>-->
+<!--          <p class="lead"><b>When I'm not at my desk,</b> I'm probably out playing baseball, umpiring Little League games,-->
+<!--              playing my saxophone in the local band, or up on stage talking and performing.</p>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; /.container &ndash;&gt;-->
+<!--    </section>-->
 
-    <!-- Services -->
-    <section id="skills" class="services bg-primary text-white">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-10 mx-auto">
-            <h2>Skills</h2>
-            <hr class="small">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <!--<i class="fa fa-circle fa-stack-2x"></i>-->
-                    <img class="fa fa-circle fa-stack text-primary" src="img/java.jpg">
-                  </span>
-                  <h4>
-                    <strong>Java</strong>
-                  </h4>
-                  <p>During the summer when I was 12, I taught myself the Java language and have loved it ever since.
-                      I've used Java to create multitudes of programs from desktop programs to networking applications to video games.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                        <img class="fa fa-circle fa-stack text-primary" src="img/swift.jpg">
-                  </span>
-                  <h4>
-                    <strong>Swift</strong>
-                  </h4>
-                  <p>I decided to learn Swift in order to share my ideas with the world through Apple's AppStore.
-                      I've used swift to create user friendly apps and games which can be found on the AppStore.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <img class="fa fa-circle fa-stack text-primary" src="img/html.png">
-                  </span>
-                  <h4>
-                    <strong>HTML5</strong>
-                  </h4>
-                  <p>This entire website was built with HTML5, Java Script, and CSS using the Bootstrap framework.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                   <img class="fa fa-circle fa-stack text-primary" src="img/sql.png">
+<!--    &lt;!&ndash; Services &ndash;&gt;-->
+<!--    <section id="skills" class="services bg-primary text-white">-->
+<!--      <div class="container">-->
+<!--        <div class="row text-center">-->
+<!--          <div class="col-lg-10 mx-auto">-->
+<!--            <h2>Skills</h2>-->
+<!--            <hr class="small">-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-3 col-sm-6">-->
+<!--                <div class="service-item">-->
+<!--                  <span class="fa-stack fa-4x">-->
+<!--                    &lt;!&ndash;<i class="fa fa-circle fa-stack-2x"></i>&ndash;&gt;-->
+<!--                    <img class="fa fa-circle fa-stack text-primary" src="img/java.jpg">-->
+<!--                  </span>-->
+<!--                  <h4>-->
+<!--                    <strong>Java</strong>-->
+<!--                  </h4>-->
+<!--                  <p>During the summer when I was 12, I taught myself the Java language and have loved it ever since.-->
+<!--                      I've used Java to create multitudes of programs from desktop programs to networking applications to video games.</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-3 col-sm-6">-->
+<!--                <div class="service-item">-->
+<!--                  <span class="fa-stack fa-4x">-->
+<!--                        <img class="fa fa-circle fa-stack text-primary" src="img/swift.jpg">-->
+<!--                  </span>-->
+<!--                  <h4>-->
+<!--                    <strong>Swift</strong>-->
+<!--                  </h4>-->
+<!--                  <p>I decided to learn Swift in order to share my ideas with the world through Apple's AppStore.-->
+<!--                      I've used swift to create user friendly apps and games which can be found on the AppStore.</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-3 col-sm-6">-->
+<!--                <div class="service-item">-->
+<!--                  <span class="fa-stack fa-4x">-->
+<!--                    <img class="fa fa-circle fa-stack text-primary" src="img/html.png">-->
+<!--                  </span>-->
+<!--                  <h4>-->
+<!--                    <strong>HTML5</strong>-->
+<!--                  </h4>-->
+<!--                  <p>This entire website was built with HTML5, Java Script, and CSS using the Bootstrap framework.</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-3 col-sm-6">-->
+<!--                <div class="service-item">-->
+<!--                  <span class="fa-stack fa-4x">-->
+<!--                   <img class="fa fa-circle fa-stack text-primary" src="img/sql.png">-->
 
-                  </span>
-                  <h4>
-                    <strong>SQL</strong>
-                  </h4>
-                  <p>In many classes and internships I have used SQL as a way to manage and query databases.</p>
-                </div>
-              </div>
-            </div>
-            <!-- /.row (nested) -->
-          </div>
-          <!-- /.col-lg-10 -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
+<!--                  </span>-->
+<!--                  <h4>-->
+<!--                    <strong>SQL</strong>-->
+<!--                  </h4>-->
+<!--                  <p>In many classes and internships I have used SQL as a way to manage and query databases.</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.row (nested) &ndash;&gt;-->
+<!--          </div>-->
+<!--          &lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.row &ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; /.container &ndash;&gt;-->
+<!--    </section>-->
 
-    <!-- Callout -->
-    <!--<aside class="callout">-->
-      <!--<div class="text-vertical-center">-->
-        <!--<h1>Vertically Centered Text</h1>-->
-      <!--</div>-->
-    <!--</aside>-->
+<!--    &lt;!&ndash; Callout &ndash;&gt;-->
+<!--    &lt;!&ndash;<aside class="callout">&ndash;&gt;-->
+<!--      &lt;!&ndash;<div class="text-vertical-center">&ndash;&gt;-->
+<!--        &lt;!&ndash;<h1>Vertically Centered Text</h1>&ndash;&gt;-->
+<!--      &lt;!&ndash;</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;</aside>&ndash;&gt;-->
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h2>My Projects</h2>
-            <hr class="small">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="mazetrials.html">
-                    <img class="img-portfolio img-fluid" src="img/Maze%20Trials%20Logo.png">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="wallball.html">
-                    <img class="img-portfolio img-fluid" src="img/WB%20Logo.png">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-              <div class="portfolio-item">
-                <a href="ThoughtsAndPrayers.html">
-                  <img class="img-portfolio img-fluid" src="img/TAP.png">
-                </a>
-              </div>
-            </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="passbook.html">
-                    <img class="img-portfolio img-fluid" src="img/Logo_Name.png">
-                  </a>
-                </div>
-              </div>
-              <!--<div class="col-md-6">-->
-                <!--<div class="portfolio-item">-->
-                  <!--<a href="#">-->
-                    <!--<img class="img-portfolio img-fluid" src="img/portfolio-4.jpg">-->
-                  <!--</a>-->
-                <!--</div>-->
-              <!--</div>-->
-            </div>
-            <!-- /.row (nested) -->
-            <!--<a href="#" class="btn btn-dark">View More Items</a>-->
-          </div>
-          <!-- /.col-lg-10 -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
+<!--    &lt;!&ndash; Portfolio &ndash;&gt;-->
+<!--    <section id="portfolio" class="portfolio">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-lg-10 mx-auto text-center">-->
+<!--            <h2>My Projects</h2>-->
+<!--            <hr class="small">-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="portfolio-item">-->
+<!--                  <a href="mazetrials.html">-->
+<!--                    <img class="img-portfolio img-fluid" src="img/Maze%20Trials%20Logo.png">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="portfolio-item">-->
+<!--                  <a href="wallball.html">-->
+<!--                    <img class="img-portfolio img-fluid" src="img/WB%20Logo.png">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-6">-->
+<!--              <div class="portfolio-item">-->
+<!--                <a href="ThoughtsAndPrayers.html">-->
+<!--                  <img class="img-portfolio img-fluid" src="img/TAP.png">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="portfolio-item">-->
+<!--                  <a href="passbook.html">-->
+<!--                    <img class="img-portfolio img-fluid" src="img/Logo_Name.png">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              &lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
+<!--                &lt;!&ndash;<div class="portfolio-item">&ndash;&gt;-->
+<!--                  &lt;!&ndash;<a href="#">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<img class="img-portfolio img-fluid" src="img/portfolio-4.jpg">&ndash;&gt;-->
+<!--                  &lt;!&ndash;</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;</div>&ndash;&gt;-->
+<!--              &lt;!&ndash;</div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.row (nested) &ndash;&gt;-->
+<!--            &lt;!&ndash;<a href="#" class="btn btn-dark">View More Items</a>&ndash;&gt;-->
+<!--          </div>-->
+<!--          &lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.row &ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; /.container &ndash;&gt;-->
+<!--    </section>-->
 
-    <!-- Call to Action -->
-    <!--<aside class="call-to-action bg-primary text-white">-->
-      <!--<div class="container text-center">-->
-        <!--<h3>The buttons below are impossible to resist.</h3>-->
-        <!--<a href="#" class="btn btn-lg btn-light">Contact me!</a>-->
-        <!--<a href="#" class="btn btn-lg btn-dark">Look at Me!</a>-->
-      <!--</div>-->
-    <!--</aside>-->
+<!--    &lt;!&ndash; Call to Action &ndash;&gt;-->
+<!--    &lt;!&ndash;<aside class="call-to-action bg-primary text-white">&ndash;&gt;-->
+<!--      &lt;!&ndash;<div class="container text-center">&ndash;&gt;-->
+<!--        &lt;!&ndash;<h3>The buttons below are impossible to resist.</h3>&ndash;&gt;-->
+<!--        &lt;!&ndash;<a href="#" class="btn btn-lg btn-light">Contact me!</a>&ndash;&gt;-->
+<!--        &lt;!&ndash;<a href="#" class="btn btn-lg btn-dark">Look at Me!</a>&ndash;&gt;-->
+<!--      &lt;!&ndash;</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;</aside>&ndash;&gt;-->
 
-    <!--&lt;!&ndash; Map &ndash;&gt;-->
-    <!--<section id="contact" class="map">-->
-      <!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
-      <!--<br/>-->
-      <!--<small>-->
-        <!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
-      <!--</small>-->
-    <!--</section>-->
+<!--    &lt;!&ndash;&lt;!&ndash; Map &ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;<section id="contact" class="map">&ndash;&gt;-->
+<!--      &lt;!&ndash;<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>&ndash;&gt;-->
+<!--      &lt;!&ndash;<br/>&ndash;&gt;-->
+<!--      &lt;!&ndash;<small>&ndash;&gt;-->
+<!--        &lt;!&ndash;<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>&ndash;&gt;-->
+<!--      &lt;!&ndash;</small>&ndash;&gt;-->
+<!--    &lt;!&ndash;</section>&ndash;&gt;-->
 
-    <!-- Footer -->
-    <section id="contact">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h4>
-              <strong>Maxwell Hubbard</strong>
-            </h4>
-            <p>Boston Area, MA</p>
-            <ul class="list-unstyled">
-              <li>
-                <i class="fa fa-envelope-o fa-fw"></i>
-                <a href="mailto:name@example.com">hubs.maxwell@gmail.com</a>
-              </li>
-            </ul>
-            <br>
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/Max_Hubbard">
-                  <i class="fa fa-twitter fa-fw fa-3x"></i>
-                </a>
-              </li>
-            </ul>
-            <hr class="small">
-            <p class="text-muted">Copyright &copy; Maxwell Hubbard 2019</p>
-            <p class="text-muted">This website features some wonderful photography courtesy of
-              <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
-          </div>
-        </div>
-      </div>
-      <a id="to-top" href="#top" class="btn btn-dark btn-lg js-scroll-trigger">
-        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
-      </a>
-    </footer>
-    </section>
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <section id="contact">-->
+<!--    <footer>-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-lg-10 mx-auto text-center">-->
+<!--            <h4>-->
+<!--              <strong>Maxwell Hubbard</strong>-->
+<!--            </h4>-->
+<!--            <p>Boston Area, MA</p>-->
+<!--            <ul class="list-unstyled">-->
+<!--              <li>-->
+<!--                <i class="fa fa-envelope-o fa-fw"></i>-->
+<!--                <a href="mailto:name@example.com">hubs.maxwell@gmail.com</a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--            <br>-->
+<!--            <ul class="list-inline">-->
+<!--              <li class="list-inline-item">-->
+<!--                <a href="https://twitter.com/Max_Hubbard">-->
+<!--                  <i class="fa fa-twitter fa-fw fa-3x"></i>-->
+<!--                </a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--            <hr class="small">-->
+<!--            <p class="text-muted">Copyright &copy; Maxwell Hubbard 2019</p>-->
+<!--            <p class="text-muted">This website features some wonderful photography courtesy of-->
+<!--              <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <a id="to-top" href="#top" class="btn btn-dark btn-lg js-scroll-trigger">-->
+<!--        <i class="fa fa-chevron-up fa-fw fa-1x"></i>-->
+<!--      </a>-->
+<!--    </footer>-->
+<!--    </section>-->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--    &lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
+<!--    <script src="vendor/jquery/jquery.min.js"></script>-->
+<!--    <script src="vendor/popper/popper.min.js"></script>-->
+<!--    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!--    &lt;!&ndash; Plugin JavaScript &ndash;&gt;-->
+<!--    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
 
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.js"></script>
+<!--    &lt;!&ndash; Custom scripts for this template &ndash;&gt;-->
+<!--    <script src="js/stylish-portfolio.js"></script>-->
 
   </body>
 
