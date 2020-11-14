@@ -12,12 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21987">
-              <caret line="1047" lean-forward="true" selection-start-line="1047" selection-end-line="1047" />
+            <state relative-caret-position="434">
+              <caret line="1056" column="58" lean-forward="true" selection-start-line="1056" selection-start-column="58" selection-end-line="1056" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -202,13 +202,7 @@
       <workItem from="1603468048114" duration="688000" />
       <workItem from="1604415529324" duration="114000" />
       <workItem from="1604415657561" duration="473000" />
-    </task>
-    <task id="LOCAL-00006" summary="DOTD">
-      <created>1569244861536</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1569244861536</updated>
+      <workItem from="1604853519452" duration="161000" />
     </task>
     <task id="LOCAL-00007" summary="DOTD">
       <created>1569516508093</created>
@@ -546,14 +540,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604416079748</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="DOTD">
+      <created>1604853647074</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1604853647075</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60208000" />
+    <option name="totallyTimeSpent" value="60369000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -588,24 +589,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dotd/8152020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/8162020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/8172020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/8182020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/8192020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/8202020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/8212020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -702,10 +685,28 @@
     <entry file="file://$PROJECT_DIR$/dotd/10252020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11092020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11102020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11112020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11122020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11132020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/11142020.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21987">
-          <caret line="1047" lean-forward="true" selection-start-line="1047" selection-end-line="1047" />
+        <state relative-caret-position="434">
+          <caret line="1056" column="58" lean-forward="true" selection-start-line="1056" selection-start-column="58" selection-end-line="1056" selection-end-column="58" />
         </state>
       </provider>
     </entry>
