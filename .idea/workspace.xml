@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="1054" column="65" lean-forward="true" selection-start-line="1054" selection-start-column="65" selection-end-line="1054" selection-end-column="65" />
+            <state relative-caret-position="189">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -59,6 +59,7 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-291" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="812" />
@@ -68,7 +69,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,6 +85,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,13 +205,7 @@
       <workItem from="1604415657561" duration="473000" />
       <workItem from="1604853519452" duration="161000" />
       <workItem from="1605374305820" duration="128000" />
-    </task>
-    <task id="LOCAL-00008" summary="DOTD">
-      <created>1569516536792</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1569516536792</updated>
+      <workItem from="1605799175737" duration="187000" />
     </task>
     <task id="LOCAL-00009" summary="DOTD">
       <created>1569516598371</created>
@@ -548,11 +543,18 @@
       <option name="project" value="LOCAL" />
       <updated>1605374398306</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="DOTD">
+      <created>1605799343207</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1605799343208</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60497000" />
+    <option name="totallyTimeSpent" value="60684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -708,8 +710,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="1054" column="65" lean-forward="true" selection-start-line="1054" selection-start-column="65" selection-end-line="1054" selection-end-column="65" />
+        <state relative-caret-position="189">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
