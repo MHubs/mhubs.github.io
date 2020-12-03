@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="" />
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="350">
+              <caret line="1080" selection-start-line="1080" selection-end-line="1080" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -59,7 +72,7 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-291" />
+    <option name="x" value="-22" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="812" />
@@ -75,11 +88,6 @@
             <path>
               <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="dotd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,13 +214,10 @@
       <workItem from="1604853519452" duration="161000" />
       <workItem from="1605374305820" duration="128000" />
       <workItem from="1605799175737" duration="187000" />
-    </task>
-    <task id="LOCAL-00009" summary="DOTD">
-      <created>1569516598371</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1569516598371</updated>
+      <workItem from="1605971862764" duration="99000" />
+      <workItem from="1606584430448" duration="825000" />
+      <workItem from="1606777506263" duration="666000" />
+      <workItem from="1607014136230" duration="193000" />
     </task>
     <task id="LOCAL-00010" summary="DOTD">
       <created>1570551986191</created>
@@ -550,14 +555,22 @@
       <option name="project" value="LOCAL" />
       <updated>1605799343208</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="DOTD">
+      <created>1605971940611</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1605971940619</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60684000" />
+    <option name="totallyTimeSpent" value="62479000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="0" />
+    <frame x="-22" y="23" width="1440" height="812" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -659,13 +672,6 @@
     <entry file="file://$PROJECT_DIR$/mazetrials.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6489">
-          <caret line="309" column="21" selection-start-line="309" selection-start-column="21" selection-end-line="309" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/10242020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -708,10 +714,17 @@
     <entry file="file://$PROJECT_DIR$/dotd/11192020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="350">
+          <caret line="1080" selection-start-line="1080" selection-end-line="1080" />
         </state>
       </provider>
     </entry>

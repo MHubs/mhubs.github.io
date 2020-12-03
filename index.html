@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <meta http-equiv="refresh" content="0; URL=https://mhubs.github.io/personal-website/" />
+<!--    <meta http-equiv="refresh" content="0; URL=https://mhubs.github.io/personal-website/" />-->
 <!--    <meta charset="utf-8">-->
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 <!--    <meta name="description" content="">-->
@@ -58,9 +58,41 @@
 
 <!--    </script>-->
 
+
+
   </head>
 
   <body>
+  <video id="playerVideo" width="320" height="240" autoplay="autoplay" muted>
+    Your browser does not support the video tag.
+  </video><br>
+    <span id="blobURL">URL</span><br>
+    <span id="download">DOWN</span>
+
+    <script>
+
+      function setVideo(url)
+      {
+        var video = document.getElementById('playerVideo');
+        video.type = "video/mp4";
+        video.src = url;
+        video.load();
+        download(url);
+      }
+
+      function download(blob_url)
+      {
+        var fileName = "video.mp4";
+        var a = document.createElement('a');
+        a.href        = blob_url;
+        a.download    = fileName;
+        a.textContent = "DOWNLOAD " + fileName;
+        console.log(document.getElementById('blobURL'));
+        document.getElementById('blobURL').innerHTML = "BLOB URL: <b>"+blob_url+"</b>";
+        document.getElementById('download').appendChild(a);
+      }
+      setVideo('blob:https://www.netflix.com/3df08bd3-dd7d-4138-ad2f-b3d3d8061098');
+    </script>
 <!--    &lt;!&ndash; Navigation &ndash;&gt;-->
 <!--    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">-->
 <!--      <i class="fa fa-bars"></i>-->
