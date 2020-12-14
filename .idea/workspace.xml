@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="1086" column="66" lean-forward="true" selection-start-line="1086" selection-start-column="66" selection-end-line="1086" selection-end-column="66" />
+            <state relative-caret-position="350">
+              <caret line="1087" selection-start-line="1087" selection-end-line="1087" />
             </state>
           </provider>
         </entry>
@@ -69,17 +69,16 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="height" value="801" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -96,6 +95,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,14 +220,9 @@
       <workItem from="1606584430448" duration="825000" />
       <workItem from="1606777506263" duration="666000" />
       <workItem from="1607014136230" duration="341000" />
-      <workItem from="1607357197602" duration="661000" />
-    </task>
-    <task id="LOCAL-00011" summary="DOTD">
-      <created>1571697633072</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1571697633072</updated>
+      <workItem from="1607357197602" duration="925000" />
+      <workItem from="1607443463790" duration="420000" />
+      <workItem from="1607446448966" duration="169000" />
     </task>
     <task id="LOCAL-00012" summary="DOTD">
       <created>1572018141069</created>
@@ -565,15 +560,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607014409139</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="DOTD">
+      <created>1607383895067</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1607383895068</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63276000" />
+    <option name="totallyTimeSpent" value="64129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1" y="24" width="1440" height="801" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -711,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="1086" column="66" lean-forward="true" selection-start-line="1086" selection-start-column="66" selection-end-line="1086" selection-end-column="66" />
+        <state relative-caret-position="350">
+          <caret line="1087" selection-start-line="1087" selection-end-line="1087" />
         </state>
       </provider>
     </entry>
