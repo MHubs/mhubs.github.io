@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
-    </list>
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="1141" column="78" selection-start-line="1141" selection-start-column="78" selection-end-line="1141" selection-end-column="78" />
+            <state relative-caret-position="515">
+              <caret line="1149" lean-forward="true" selection-start-line="1149" selection-end-line="1149" />
             </state>
           </provider>
         </entry>
@@ -71,7 +68,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
+    <option name="x" value="-206" />
+    <option name="y" value="106" />
     <option name="width" value="1440" />
     <option name="height" value="794" />
   </component>
@@ -227,14 +225,7 @@
       <workItem from="1608494942054" duration="446000" />
       <workItem from="1609255668869" duration="525000" />
       <workItem from="1609969496963" duration="331000" />
-      <workItem from="1611152600152" duration="153000" />
-    </task>
-    <task id="LOCAL-00016" summary="DOTD">
-      <created>1573053153916</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1573053153916</updated>
+      <workItem from="1611152600152" duration="413000" />
     </task>
     <task id="LOCAL-00017" summary="DOTD">
       <created>1574309111590</created>
@@ -572,15 +563,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609969870001</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="DOTD">
+      <created>1611153059162</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1611153059171</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65778000" />
+    <option name="totallyTimeSpent" value="65844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="794" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21423538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -615,17 +612,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/public/index.html" />
-    <entry file="file://$PROJECT_DIR$/website/public/images/portfolio/resume-website.jpg" />
-    <entry file="file://$PROJECT_DIR$/img/Maze Trials Logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/Logo_Name.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/Components/Resume.js" />
-    <entry file="file://$PROJECT_DIR$/website/src/Components/Testimonials.js" />
-    <entry file="file://$PROJECT_DIR$/website/src/Components/About.js" />
     <entry file="file://$PROJECT_DIR$/img/TAP.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -736,17 +722,38 @@
     <entry file="file://$PROJECT_DIR$/dotd/1102021.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="1141" column="78" selection-start-line="1141" selection-start-column="78" selection-end-line="1141" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1953">
           <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1212021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1222021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1232021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1242021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1252021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1262021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/1272021.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="1149" lean-forward="true" selection-start-line="1149" selection-end-line="1149" />
         </state>
       </provider>
     </entry>
