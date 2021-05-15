@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="" />
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="1256" column="84" selection-start-line="1256" selection-start-column="84" selection-end-line="1256" selection-end-column="84" />
+            <state relative-caret-position="452">
+              <caret line="1268" selection-start-line="1268" selection-end-line="1268" />
             </state>
           </provider>
         </entry>
@@ -68,7 +70,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
+    <option name="x" value="-1693" />
+    <option name="y" value="139" />
     <option name="width" value="1440" />
     <option name="height" value="794" />
   </component>
@@ -238,13 +241,8 @@
       <workItem from="1616072727444" duration="202000" />
       <workItem from="1617200454562" duration="249000" />
       <workItem from="1618841428233" duration="317000" />
-    </task>
-    <task id="LOCAL-00025" summary="DOTD">
-      <created>1586613543682</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1586613543682</updated>
+      <workItem from="1620309405576" duration="829000" />
+      <workItem from="1620670594776" duration="6000" />
     </task>
     <task id="LOCAL-00026" summary="DOTD">
       <created>1586870829959</created>
@@ -582,14 +580,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618841629423</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="DOTD">
+      <created>1620309600323</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1620309600324</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70277000" />
+    <option name="totallyTimeSpent" value="71112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="799" extended-state="6" />
+    <frame x="0" y="25" width="1440" height="794" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21353066" />
@@ -776,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="1256" column="84" selection-start-line="1256" selection-start-column="84" selection-end-line="1256" selection-end-column="84" />
+        <state relative-caret-position="452">
+          <caret line="1268" selection-start-line="1268" selection-end-line="1268" />
         </state>
       </provider>
     </entry>
