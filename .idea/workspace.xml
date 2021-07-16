@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -252,13 +252,7 @@
       <workItem from="1625258528840" duration="86000" />
       <workItem from="1625418907203" duration="26000" />
       <workItem from="1625781722966" duration="123000" />
-    </task>
-    <task id="LOCAL-00032" summary="DOTD">
-      <created>1590947577428</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1590947577428</updated>
+      <workItem from="1625943406764" duration="101000" />
     </task>
     <task id="LOCAL-00033" summary="DOTD">
       <created>1591925083564</created>
@@ -596,11 +590,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625781807958</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="DOTD">
+      <created>1625943459696</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1625943459697</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80289000" />
+    <option name="totallyTimeSpent" value="80390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="794" extended-state="0" />
@@ -784,7 +785,7 @@
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
