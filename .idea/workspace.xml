@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="Add app-ads.txt" />
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
+      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,13 +231,7 @@
       <workItem from="1627852821135" duration="1149000" />
       <workItem from="1628944714555" duration="474000" />
       <workItem from="1629598487349" duration="736000" />
-    </task>
-    <task id="LOCAL-00040" summary="DOTD">
-      <created>1598101699871</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1598101699871</updated>
+      <workItem from="1630017710345" duration="337000" />
     </task>
     <task id="LOCAL-00041" summary="DOTD">
       <created>1598274727708</created>
@@ -573,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629598583421</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="DOTD">
+      <created>1630018021621</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1630018021621</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -623,9 +626,9 @@
     <MESSAGE value="Halloween" />
     <MESSAGE value="Website Update" />
     <MESSAGE value="Update website" />
-    <MESSAGE value="DOTD" />
     <MESSAGE value="Add app-ads.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add app-ads.txt" />
+    <MESSAGE value="DOTD" />
+    <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dotd/11182020.jpeg">
