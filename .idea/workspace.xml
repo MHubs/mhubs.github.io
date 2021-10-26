@@ -3,12 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HalloweenAnimate.html" beforeDir="false" afterPath="$PROJECT_DIR$/HalloweenAnimate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-ads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app-ads.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/8152021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8152021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/8162021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8162021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/8172021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8172021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/8272021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8272021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/8282021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8282021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/9192021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9192021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/9202021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9202021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/9212021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9212021.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotd/9222021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9222021.jpeg" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="1446" column="58" lean-forward="true" selection-start-line="1446" selection-start-column="58" selection-end-line="1446" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -63,11 +90,6 @@
               <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="dotd" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -103,7 +125,19 @@
       <recent name="$PROJECT_DIR$/website/public/images/portfolio" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -235,21 +269,8 @@
       <workItem from="1630017710345" duration="378000" />
       <workItem from="1631973546757" duration="257000" />
       <workItem from="1633009641437" duration="390000" />
-      <workItem from="1633270793759" duration="331000" />
-    </task>
-    <task id="LOCAL-00043" summary="DOTD">
-      <created>1599922754227</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1599922754227</updated>
-    </task>
-    <task id="LOCAL-00044" summary="DOTD">
-      <created>1599922832958</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1599922832958</updated>
+      <workItem from="1633270793759" duration="346000" />
+      <workItem from="1634781413263" duration="579000" />
     </task>
     <task id="LOCAL-00045" summary="DOTD">
       <created>1600045720980</created>
@@ -580,11 +601,25 @@
       <option name="project" value="LOCAL" />
       <updated>1631973733811</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="DOTD">
+      <created>1633271134159</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1633271134159</updated>
+    </task>
+    <task id="LOCAL-00093" summary="DOTD">
+      <created>1634781972782</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1634781972782</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81583000" />
+    <option name="totallyTimeSpent" value="82162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="794" extended-state="0" />
@@ -611,19 +646,39 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Website update" />
@@ -778,17 +833,17 @@
     <entry file="file://$PROJECT_DIR$/dotd/8012021.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1953">
           <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="1446" column="58" lean-forward="true" selection-start-line="1446" selection-start-column="58" selection-end-line="1446" selection-end-column="58" />
         </state>
       </provider>
     </entry>
