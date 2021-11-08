@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HalloweenAnimate.html" beforeDir="false" afterPath="$PROJECT_DIR$/HalloweenAnimate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-ads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app-ads.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/8152021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8152021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/8162021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8162021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/8172021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8172021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/8272021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8272021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/8282021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/8282021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/9192021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9192021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/9202021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9202021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/9212021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9212021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotd/9222021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/dotd/9222021.jpeg" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="1446" column="58" lean-forward="true" selection-start-line="1446" selection-start-column="58" selection-end-line="1446" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -125,19 +95,7 @@
       <recent name="$PROJECT_DIR$/website/public/images/portfolio" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -271,13 +229,7 @@
       <workItem from="1633009641437" duration="390000" />
       <workItem from="1633270793759" duration="346000" />
       <workItem from="1634781413263" duration="579000" />
-    </task>
-    <task id="LOCAL-00045" summary="DOTD">
-      <created>1600045720980</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1600045720980</updated>
+      <workItem from="1635215459643" duration="192000" />
     </task>
     <task id="LOCAL-00046" summary="DOTD">
       <created>1601044421873</created>
@@ -615,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634781972782</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="DOTD">
+      <created>1635215623767</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1635215623768</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -646,21 +605,14 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -679,6 +631,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Website update" />
