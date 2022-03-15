@@ -9,6 +9,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>websocket-ex</find>
@@ -73,9 +80,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Final-Frontiers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -241,13 +249,10 @@
       <workItem from="1643642370429" duration="269000" />
       <workItem from="1644246185832" duration="182000" />
       <workItem from="1646086753849" duration="1329000" />
-    </task>
-    <task id="LOCAL-00057" summary="DOTD">
-      <created>1605799343207</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1605799343208</updated>
+      <workItem from="1646409024879" duration="146000" />
+      <workItem from="1646587028169" duration="1619000" />
+      <workItem from="1646588891966" duration="598000" />
+      <workItem from="1646589826416" duration="790000" />
     </task>
     <task id="LOCAL-00058" summary="DOTD">
       <created>1605971940611</created>
@@ -585,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646088044108</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="DOTD">
+      <created>1646409165577</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1646409165577</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
