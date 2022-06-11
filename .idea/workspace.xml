@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,14 +260,8 @@
       <workItem from="1651846168981" duration="141000" />
       <workItem from="1653222013819" duration="225000" />
       <workItem from="1653426010461" duration="4377000" />
-      <workItem from="1653783185819" duration="1117000" />
-    </task>
-    <task id="LOCAL-00065" summary="DOTD">
-      <created>1611153059162</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1611153059171</updated>
+      <workItem from="1653783185819" duration="1596000" />
+      <workItem from="1653840296799" duration="8793000" />
     </task>
     <task id="LOCAL-00066" summary="DOTD">
       <created>1611760310665</created>
@@ -604,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653222217330</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="DOTD">
+      <created>1653838547015</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1653838547015</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
