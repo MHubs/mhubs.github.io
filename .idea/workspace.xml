@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DogOfTheDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/DogOfTheDay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +47,6 @@
       </list>
     </option>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/package.json" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="25" />
     <option name="width" value="1440" />
@@ -69,6 +65,11 @@
             <path>
               <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mhubs.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mhubs.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="dotd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -263,35 +264,9 @@
       <workItem from="1653783185819" duration="1596000" />
       <workItem from="1653840296799" duration="8793000" />
       <workItem from="1655557373283" duration="25000" />
-      <workItem from="1655999860070" duration="672000" />
-    </task>
-    <task id="LOCAL-00066" summary="DOTD">
-      <created>1611760310665</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1611760310666</updated>
-    </task>
-    <task id="LOCAL-00067" summary="DOTD">
-      <created>1612235699482</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1612235699483</updated>
-    </task>
-    <task id="LOCAL-00068" summary="DOTD">
-      <created>1613139785950</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1613139785950</updated>
-    </task>
-    <task id="LOCAL-00069" summary="DOTD">
-      <created>1613964050150</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1613964050151</updated>
+      <workItem from="1655999860070" duration="859000" />
+      <workItem from="1657246613770" duration="2151000" />
+      <workItem from="1657556279358" duration="206000" />
     </task>
     <task id="LOCAL-00070" summary="DOTD">
       <created>1614611973932</created>
@@ -608,11 +583,39 @@
       <option name="project" value="LOCAL" />
       <updated>1653838547015</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="DOTD">
+      <created>1656000708413</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1656000708414</updated>
+    </task>
+    <task id="LOCAL-00116" summary="DOTD">
+      <created>1657247327254</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1657247327254</updated>
+    </task>
+    <task id="LOCAL-00117" summary="DOTD">
+      <created>1657247416167</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1657247416167</updated>
+    </task>
+    <task id="LOCAL-00118" summary="DOTD">
+      <created>1657556467635</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1657556467635</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82162000" />
+    <option name="totallyTimeSpent" value="84313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="794" extended-state="0" />
@@ -677,21 +680,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="DOTD" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dotd/11182020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/11192020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/12092020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/12082020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotd/12102020.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dotd/12112020.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -827,10 +815,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/7082022.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/7092022.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/7102022.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/7112022.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotd/7092022.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/DogOfTheDay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="1446" column="58" lean-forward="true" selection-start-line="1446" selection-start-column="58" selection-end-line="1446" selection-end-column="58" />
+        <state relative-caret-position="473">
+          <caret line="1776" column="7" lean-forward="true" selection-start-line="1776" selection-start-column="7" selection-end-line="1776" selection-end-column="7" />
         </state>
       </provider>
     </entry>
