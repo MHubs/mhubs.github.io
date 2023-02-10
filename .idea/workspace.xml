@@ -266,13 +266,6 @@
       <workItem from="1660143473962" duration="430000" />
       <workItem from="1661807163049" duration="263000" />
     </task>
-    <task id="LOCAL-00087" summary="DOTD">
-      <created>1628945126564</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1628945126564</updated>
-    </task>
     <task id="LOCAL-00088" summary="Add app-ads.txt">
       <created>1629598583421</created>
       <option name="number" value="00088" />
@@ -609,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673895709391</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="DOTD">
+      <created>1674659206912</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1674659206912</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
