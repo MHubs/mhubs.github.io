@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list default="true" id="7b0c4ec4-141e-4be5-894f-d8cf7bf694bc" name="Default Changelist" comment="DOTD">
       <change afterPath="$PROJECT_DIR$/dog/privacy-polcy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website.iml" afterDir="false" />
@@ -92,10 +95,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hubsm/OneDrive/mhubs.github.io",
+    "last_opened_file_path": "C:/Users/hubsm/IdeaProjects/Planets Metadata Thing",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
@@ -274,104 +276,6 @@
       <workItem from="1659101828398" duration="153000" />
       <workItem from="1660143473962" duration="430000" />
       <workItem from="1661807163049" duration="263000" />
-    </task>
-    <task id="LOCAL-00092" summary="DOTD">
-      <created>1633271134159</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1633271134159</updated>
-    </task>
-    <task id="LOCAL-00093" summary="DOTD">
-      <created>1634781972782</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1634781972782</updated>
-    </task>
-    <task id="LOCAL-00094" summary="DOTD">
-      <created>1635215623767</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1635215623768</updated>
-    </task>
-    <task id="LOCAL-00095" summary="DOTD">
-      <created>1636377771524</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1636377771525</updated>
-    </task>
-    <task id="LOCAL-00096" summary="DOTD">
-      <created>1637356463543</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1637356463543</updated>
-    </task>
-    <task id="LOCAL-00097" summary="DOTD">
-      <created>1637356489485</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1637356489485</updated>
-    </task>
-    <task id="LOCAL-00098" summary="DOTD">
-      <created>1638546243235</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1638546243235</updated>
-    </task>
-    <task id="LOCAL-00099" summary="DOTD">
-      <created>1640014391445</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1640014391445</updated>
-    </task>
-    <task id="LOCAL-00100" summary="DOTD">
-      <created>1641136545475</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1641136545475</updated>
-    </task>
-    <task id="LOCAL-00101" summary="DOTD">
-      <created>1642262540314</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1642262540314</updated>
-    </task>
-    <task id="LOCAL-00102" summary="DOTD">
-      <created>1643642602056</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1643642602056</updated>
-    </task>
-    <task id="LOCAL-00103" summary="DOTD">
-      <created>1644246336686</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1644246336686</updated>
-    </task>
-    <task id="LOCAL-00104" summary="DOTD">
-      <created>1644246362609</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1644246362609</updated>
-    </task>
-    <task id="LOCAL-00105" summary="DOTD">
-      <created>1646088044108</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1646088044108</updated>
     </task>
     <task id="LOCAL-00106" summary="DOTD">
       <created>1646409165577</created>
@@ -612,13 +516,111 @@
       <updated>1678288837383</updated>
     </task>
     <task id="LOCAL-00140" summary="DOTD">
-      <created>1680358307206</created>
+      <created>1680099325650</created>
       <option name="number" value="00140" />
       <option name="presentableId" value="LOCAL-00140" />
       <option name="project" value="LOCAL" />
-      <updated>1680358307207</updated>
+      <updated>1680099325650</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="DOTD">
+      <created>1681484234103</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1681484234104</updated>
+    </task>
+    <task id="LOCAL-00142" summary="DOTD">
+      <created>1681484306847</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1681484306847</updated>
+    </task>
+    <task id="LOCAL-00143" summary="DOTD">
+      <created>1683123093594</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1683123093594</updated>
+    </task>
+    <task id="LOCAL-00144" summary="DOTD">
+      <created>1684159420652</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1684159420652</updated>
+    </task>
+    <task id="LOCAL-00145" summary="DOTD">
+      <created>1687778937939</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1687778937940</updated>
+    </task>
+    <task id="LOCAL-00146" summary="DOTD">
+      <created>1687778966246</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1687778966246</updated>
+    </task>
+    <task id="LOCAL-00147" summary="DOTD">
+      <created>1690291691562</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1690291691562</updated>
+    </task>
+    <task id="LOCAL-00148" summary="DOTD">
+      <created>1692380826917</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1692380826917</updated>
+    </task>
+    <task id="LOCAL-00149" summary="DOTD">
+      <created>1694175163699</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1694175163699</updated>
+    </task>
+    <task id="LOCAL-00150" summary="DOTD">
+      <created>1694782031733</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1694782031733</updated>
+    </task>
+    <task id="LOCAL-00151" summary="DOTD">
+      <created>1695815376355</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1695815376356</updated>
+    </task>
+    <task id="LOCAL-00152" summary="DOTD">
+      <created>1697202212125</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1697202212125</updated>
+    </task>
+    <task id="LOCAL-00153" summary="DOTD">
+      <created>1698850415143</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1698850415144</updated>
+    </task>
+    <task id="LOCAL-00154" summary="DOTD">
+      <created>1699452402498</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1699452402498</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
