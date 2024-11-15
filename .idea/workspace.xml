@@ -276,13 +276,6 @@
       <workItem from="1660143473962" duration="430000" />
       <workItem from="1661807163049" duration="263000" />
     </task>
-    <task id="LOCAL-00132" summary="DOTD">
-      <created>1670594476682</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1670594476683</updated>
-    </task>
     <task id="LOCAL-00133" summary="DOTD">
       <created>1672594773949</created>
       <option name="number" value="00133" />
@@ -619,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729256424955</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="DOTD">
+      <created>1731075510867</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1731075510868</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
